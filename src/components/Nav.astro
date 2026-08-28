@@ -1,0 +1,25 @@
+---
+// Shared top navigation. Pass `active` to highlight the current page.
+// Values: "studio" | "projekte" | "leistungen" | "ueber-uns" | "kontakt"
+interface Props {
+  active?: string;
+}
+const { active } = Astro.props;
+
+const links = [
+  { href: '/', label: 'Studio', key: 'studio' },
+  { href: '/projekte', label: 'Projekte', key: 'projekte' },
+  { href: '/leistungen', label: 'Leistungen', key: 'leistungen' },
+  { href: '/ueber-uns', label: 'Über uns', key: 'ueber-uns' },
+];
+---
+<nav class="nav">
+  <a href="/" class="nav-logo">Raumwerk<span class="dot"></span></a>
+  <ul class="nav-links">
+    {links.map((l) => (
+      <li><a href={l.href} class:list={[{ active: active === l.key }]}>{l.label}</a></li>
+    ))}
+    <li><a href="/kontakt" class:list={['nav-cta', { active: active === 'kontakt' }]}>Kontakt</a></li>
+  </ul>
+  <div class="burger"><span></span><span></span><span></span></div>
+</nav>

@@ -1,0 +1,169 @@
+---
+import '../styles/style.css';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  active?: string;
+}
+
+const { title, description, active } = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+</head>
+<body>
+  <Nav active={active} />
+
+  <slot />
+
+  <Footer />
+
+  <script>
+    // ============================================
+    // RAUMWERK – Interactive Behavior
+    // ============================================
+
+    // Sticky nav
+    const nav = document.querySelector('.nav');
+    if (nav) {
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 60) nav.classList.add('scrolled');
+        else nav.classList.remove('scrolled');
+      });
+    }
+
+    // Mobile burger
+    const burger = document.querySelector('.burger');
+    const navLinks = document.querySelector('.nav-links');
+    if (burger && navLinks) {
+      burger.addEventListener('click', () => navLinks.classList.toggle('open'));
+    }
+
+    // Tabs
+    document.querySelectorAll('.tab-btn').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const target = (btn as HTMLElement).dataset.tab;
+        document.querySelectorAll('.tab-btn').forEach((b) => b.classList.remove('active'));
+        document.querySelectorAll('.tab-content').forEach((c) => c.classList.remove('active'));
+        btn.classList.add('active');
+        const targetEl = document.querySelector<HTMLElement>(`.tab-content[data-tab="${target}"]`);
+        if (targetEl) {
+          targetEl.style.animation = 'none';
+          void targetEl.offsetHeight; // reflow
+          targetEl.style.animation = '';
+          targetEl.classList.add('active');
+        }
+      });
+    });
+
+    // Fade-in on scroll
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15, rootMargin: '0px 0px -80px 0px' }
+    );
+
+    document.querySelectorAll('.fade-in').forEach((el) => observer.observe(el));
+
+    // Testimonial slider
+    const testimonials = [
+      {
+        quote:
+          'Raumwerk hat unser denkmalgeschütztes Stadthaus in einen Ort verwandelt, an dem Vergangenheit und Gegenwart selbstverständlich miteinander wohnen. Eine Sensibilität, die selten geworden ist.',
+        name: 'Dr. Cornelia Wiegand',
+        role: 'Bauherrin, Villa am Heiligen See',
+      },
+      {
+        quote:
+          'Die Zusammenarbeit war von der ersten Skizze bis zur Schlüsselübergabe geprägt von Klarheit, Handwerkskunst und einem feinen Gespür für Atmosphäre. Wir empfehlen das Studio uneingeschränkt weiter.',
+        name: 'Felix & Antonia Reinholdt',
+        role: 'Restaurant Mira, Potsdam',
+      },
+      {
+        quote:
+          'Lena und ihr Team haben es geschafft, die Identität unseres Hotels in jedem Detail spürbar zu machen – von der Tapete bis zum Türgriff. Unsere Gäste sprechen jeden Tag darüber.',
+        name: 'Henrik Albrecht',
+        role: 'Direktor, Sanssouci Suites Hotel',
+      },
+    ];
+
+    let testimonialIndex = 0;
+    const quoteEl = document.querySelector<HTMLElement>('.testimonial blockquote');
+    const citeEl = document.querySelector<HTMLElement>('.testimonial cite');
+    const dotsContainer = document.querySelector('.testimonial-nav');
+
+    function renderTestimonial(i: number) {
+      if (!quoteEl || !citeEl) return;
+      const t = testimonials[i];
+      quoteEl.style.opacity = '0';
+      citeEl.style.opacity = '0';
+      setTimeout(() => {
+        quoteEl.textContent = `„${t.quote}"`;
+        citeEl.innerHTML = `<strong>${t.name}</strong>${t.role}`;
+        quoteEl.style.opacity = '1';
+        citeEl.style.opacity = '1';
+      }, 250);
+      document.querySelectorAll('.testimonial-dot').forEach((d, di) => {
+        d.classList.toggle('active', di === i);
+      });
+    }
+
+    if (dotsContainer) {
+      testimonials.forEach((_, i) => {
+        const dot = document.createElement('button');
+        dot.className = 'testimonial-dot' + (i === 0 ? ' active' : '');
+        dot.addEventListener('click', () => {
+          testimonialIndex = i;
+          renderTestimonial(i);
+        });
+        dotsContainer.appendChild(dot);
+      });
+
+      // Auto-rotate
+      setInterval(() => {
+        testimonialIndex = (testimonialIndex + 1) % testimonials.length;
+        renderTestimonial(testimonialIndex);
+      }, 7000);
+    }
+
+    // Form submit
+    const contactForm = document.querySelector<HTMLFormElement>('.contact-form form');
+    if (contactForm) {
+      contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const btn = contactForm.querySelector<HTMLButtonElement>('button[type="submit"]');
+        if (!btn) return;
+        const originalText = btn.textContent;
+        btn.textContent = 'Wird gesendet…';
+        setTimeout(() => {
+          btn.textContent = '✓ Vielen Dank';
+          contactForm.reset();
+          setTimeout(() => {
+            btn.textContent = originalText;
+          }, 2500);
+        }, 800);
+      });
+    }
+  </script>
+</body>
+</html>
