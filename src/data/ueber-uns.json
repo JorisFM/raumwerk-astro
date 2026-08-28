@@ -1,4 +1,5 @@
 {
+  "preview_url": "/ueber-uns/",
   "title": "Über uns – Raumwerk Innenarchitektur Potsdam",
   "description": "Raumwerk – ein achtköpfiges Innenarchitektur-Studio aus Potsdam. Lernen Sie das Team und unsere Haltung kennen.",
   "hero": {
@@ -22,10 +23,26 @@
     "heading_html": "Vier <em>Überzeugungen</em>.",
     "lead": "Sie schreiben sich nicht ins Leitbild – sie sitzen in den Entscheidungen, die wir jeden Tag treffen.",
     "values": [
-      { "icon": "i.", "title": "Material vor Effekt", "text": "Eiche statt Eichenfurnier. Lehm statt Latex. Naturstein statt Großformatfliese. Wir bevorzugen Materialien, die altern dürfen – weil sie es ehrlich tun." },
-      { "icon": "ii.", "title": "Langsamer denken", "text": "Die meisten Fehler entstehen in der Phase, in der zu schnell entschieden wurde. Wir nehmen uns Zeit für die ersten zwanzig Prozent – und sparen sie hinten zehnfach ein." },
-      { "icon": "iii.", "title": "Lokal arbeiten", "text": "Achtzig Prozent unserer Möbel und Sonderanfertigungen entstehen in Brandenburg und Berlin. Wir kennen unsere Tischlereien beim Vornamen – und ihre Kinder." },
-      { "icon": "iv.", "title": "Räume für Menschen", "text": "Ein guter Raum dient nicht der Architektur, sondern den Menschen, die darin leben, arbeiten oder Gäste empfangen. Wir entwerfen für den Alltag, nicht für das Magazin." }
+      {
+        "icon": "i.",
+        "title": "Material vor Effekt",
+        "text": "Eiche statt Eichenfurnier. Lehm statt Latex. Naturstein statt Großformatfliese. Wir bevorzugen Materialien, die altern dürfen – weil sie es ehrlich tun."
+      },
+      {
+        "icon": "ii.",
+        "title": "Langsamer denken",
+        "text": "Die meisten Fehler entstehen in der Phase, in der zu schnell entschieden wurde. Wir nehmen uns Zeit für die ersten zwanzig Prozent – und sparen sie hinten zehnfach ein."
+      },
+      {
+        "icon": "iii.",
+        "title": "Lokal arbeiten",
+        "text": "Achtzig Prozent unserer Möbel und Sonderanfertigungen entstehen in Brandenburg und Berlin. Wir kennen unsere Tischlereien beim Vornamen – und ihre Kinder."
+      },
+      {
+        "icon": "iv.",
+        "title": "Räume für Menschen",
+        "text": "Ein guter Raum dient nicht der Architektur, sondern den Menschen, die darin leben, arbeiten oder Gäste empfangen. Wir entwerfen für den Alltag, nicht für das Magazin."
+      }
     ]
   },
   "team_section": {
@@ -62,16 +79,35 @@
     "eyebrow": "Auszeichnungen",
     "heading_html": "Eine kleine <em>Vitrine</em>.",
     "awards": [
-      { "year": "2025", "title": "German Design Award", "text": "Excellent Architecture · Interior · Restaurant Mira" },
-      { "year": "2024", "title": "AIT Award", "text": "Shortlist · Hospitality · Sanssouci Suites" },
-      { "year": "2023", "title": "Iconic Awards", "text": "Innovative Interior · Loft Charlottenburg" },
-      { "year": "2022", "title": "Brandenburgischer Baukulturpreis", "text": "Anerkennung · Behutsamer Umbau Hofgebäude" }
+      {
+        "year": "2025",
+        "title": "German Design Award",
+        "text": "Excellent Architecture · Interior · Restaurant Mira"
+      },
+      {
+        "year": "2024",
+        "title": "AIT Award",
+        "text": "Shortlist · Hospitality · Sanssouci Suites"
+      },
+      {
+        "year": "2023",
+        "title": "Iconic Awards",
+        "text": "Innovative Interior · Loft Charlottenburg"
+      },
+      {
+        "year": "2022",
+        "title": "Brandenburgischer Baukulturpreis",
+        "text": "Anerkennung · Behutsamer Umbau Hofgebäude"
+      }
     ]
   },
   "cta": {
     "eyebrow": "Studiobesuch",
     "heading_html": "Wir kochen <em>guten Espresso</em>.",
     "text": "Vereinbaren Sie einen Termin in unserem Studio und bringen Sie ruhig schon Ihre Grundrisse mit. Oder einfach eine Idee.",
-    "button": { "label": "Kontakt aufnehmen", "href": "/kontakt" }
+    "button": {
+      "label": "Kontakt aufnehmen",
+      "href": "/kontakt"
+    }
   }
 }

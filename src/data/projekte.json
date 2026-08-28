@@ -1,4 +1,5 @@
 {
+  "preview_url": "/projekte/",
   "title": "Projekte – Raumwerk Innenarchitektur Potsdam",
   "description": "Realisierte Projekte als Fallstudien: Wohnräume, Hotellerie, Gastronomie und Möbeldesign aus dem Raumwerk Studio Potsdam.",
   "hero": {
@@ -10,16 +11,35 @@
     "eyebrow": "In Zahlen",
     "heading_html": "Elf Jahre <em>Studio</em>.",
     "stats": [
-      { "num": "87", "label": "Realisierte Projekte", "delay": 0 },
-      { "num": "14", "label": "Hotelzimmer-Typologien", "delay": 1 },
-      { "num": "340+", "label": "Maßmöbel-Anfertigungen", "delay": 2 },
-      { "num": "23", "label": "Manufakturen-Partner:innen", "delay": 3 }
+      {
+        "num": "87",
+        "label": "Realisierte Projekte",
+        "delay": 0
+      },
+      {
+        "num": "14",
+        "label": "Hotelzimmer-Typologien",
+        "delay": 1
+      },
+      {
+        "num": "340+",
+        "label": "Maßmöbel-Anfertigungen",
+        "delay": 2
+      },
+      {
+        "num": "23",
+        "label": "Manufakturen-Partner:innen",
+        "delay": 3
+      }
     ]
   },
   "cta": {
     "eyebrow": "Eigenes Vorhaben?",
     "heading_html": "Wir freuen uns auf <em>Ihre Idee</em>.",
     "text": "Senden Sie uns eine kurze Beschreibung Ihres Projekts – wir melden uns innerhalb von drei Werktagen.",
-    "button": { "label": "Anfrage senden", "href": "/kontakt" }
+    "button": {
+      "label": "Anfrage senden",
+      "href": "/kontakt"
+    }
   }
 }

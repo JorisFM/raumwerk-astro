@@ -1,4 +1,5 @@
 {
+  "preview_url": "/",
   "title": "Raumwerk – Innenarchitektur Studio Potsdam",
   "description": "Raumwerk ist ein Innenarchitektur-Studio aus Potsdam. Wir entwerfen Räume mit Charakter – für private Bauherren, Gastronomie und Hotellerie.",
   "hero": {
@@ -6,11 +7,19 @@
     "eyebrow": "Innenarchitektur Studio · Potsdam",
     "heading_html": "Räume,<br>die <em>bleiben</em>.",
     "sub": "Wir entwerfen Innenräume mit Charakter und Beständigkeit – aus Brandenburg, für Menschen, die das Echte suchen.",
-    "cta": { "label": "Projekte ansehen", "href": "/projekte" },
+    "cta": {
+      "label": "Projekte ansehen",
+      "href": "/projekte"
+    },
     "meta_html": "Est. 2014<br>52° 24′ N · 13° 04′ E<br>Potsdam · Berlin"
   },
   "marquee": [
-    "Wohnräume", "Hotellerie", "Gastronomie", "Möbeldesign", "Lichtkonzepte", "Materialwelten"
+    "Wohnräume",
+    "Hotellerie",
+    "Gastronomie",
+    "Möbeldesign",
+    "Lichtkonzepte",
+    "Materialwelten"
   ],
   "intro": {
     "eyebrow": "Studio",
@@ -20,9 +29,18 @@
       "Wir glauben an Räume, die nicht nur fotografiert werden können, sondern bewohnt. An Materialien, die altern dürfen. An eine Gestaltung, die sich nicht in den Vordergrund drängt – sondern Platz lässt für das, was hineinwächst."
     ],
     "stats": [
-      { "num": "11", "label": "Jahre Studio" },
-      { "num": "87", "label": "Realisierte Projekte" },
-      { "num": "8", "label": "Köpfe im Team" }
+      {
+        "num": "11",
+        "label": "Jahre Studio"
+      },
+      {
+        "num": "87",
+        "label": "Realisierte Projekte"
+      },
+      {
+        "num": "8",
+        "label": "Köpfe im Team"
+      }
     ],
     "image": "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=1200&q=85&auto=format&fit=crop",
     "image_alt": "Wohnzimmer mit warmem Licht und Naturmaterialien"
@@ -46,7 +64,10 @@
           "Maßmöbel und feste Einbauten",
           "Bauleitung und Gewerkekoordination"
         ],
-        "cta": { "label": "Mehr erfahren", "href": "/leistungen" }
+        "cta": {
+          "label": "Mehr erfahren",
+          "href": "/leistungen"
+        }
       },
       {
         "id": "gastro",
@@ -62,7 +83,10 @@
           "Möblierung und Sondertische",
           "Genehmigungs- und Werkplanung"
         ],
-        "cta": { "label": "Mehr erfahren", "href": "/leistungen" }
+        "cta": {
+          "label": "Mehr erfahren",
+          "href": "/leistungen"
+        }
       },
       {
         "id": "hotel",
@@ -78,7 +102,10 @@
           "Restaurant-, Spa- und Lobbygestaltung",
           "Branding-Schnittstelle und Signage"
         ],
-        "cta": { "label": "Mehr erfahren", "href": "/leistungen" }
+        "cta": {
+          "label": "Mehr erfahren",
+          "href": "/leistungen"
+        }
       },
       {
         "id": "moebel",
@@ -94,7 +121,10 @@
           "Hardware-Selektion & Sonderanfertigungen",
           "Kleinserien für Gastronomie & Hotel"
         ],
-        "cta": { "label": "Mehr erfahren", "href": "/leistungen" }
+        "cta": {
+          "label": "Mehr erfahren",
+          "href": "/leistungen"
+        }
       },
       {
         "id": "denkmal",
@@ -110,14 +140,20 @@
           "Restaurierungskonzepte",
           "Behutsame Modernisierung"
         ],
-        "cta": { "label": "Mehr erfahren", "href": "/leistungen" }
+        "cta": {
+          "label": "Mehr erfahren",
+          "href": "/leistungen"
+        }
       }
     ]
   },
   "projects": {
     "eyebrow": "Auswahl",
     "heading_html": "Aktuelle <em>Projekte</em>.",
-    "cta": { "label": "Alle Projekte", "href": "/projekte" },
+    "cta": {
+      "label": "Alle Projekte",
+      "href": "/projekte"
+    },
     "items": [
       {
         "size": "large",
@@ -157,10 +193,26 @@
     "eyebrow": "Arbeitsweise",
     "heading_html": "In vier Phasen <em>vom Aufmaß zur Schlüsselübergabe</em>.",
     "steps": [
-      { "num": "PHASE 01", "title": "Hören & Verstehen", "text": "Eine ausführliche Bestandsaufnahme – des Raums und der Menschen, die ihn bewohnen werden. Hier entscheidet sich, wohin die Reise geht." },
-      { "num": "PHASE 02", "title": "Konzept & Skizze", "text": "Aus den Gesprächen wird ein Raumkonzept: Stimmungen, Materialien, Grundrisse. Drei Entwürfe, eine klare Empfehlung." },
-      { "num": "PHASE 03", "title": "Werkplanung", "text": "Detail- und Möbelpläne, Ausschreibungen, Mustertafeln. Hier wird aus der Idee ein verbindliches Bauwerk." },
-      { "num": "PHASE 04", "title": "Realisierung", "text": "Bauleitung, Abnahme, Styling. Wir bleiben bis zur Vase auf dem Esstisch und der Pflanze im Bad." }
+      {
+        "num": "PHASE 01",
+        "title": "Hören & Verstehen",
+        "text": "Eine ausführliche Bestandsaufnahme – des Raums und der Menschen, die ihn bewohnen werden. Hier entscheidet sich, wohin die Reise geht."
+      },
+      {
+        "num": "PHASE 02",
+        "title": "Konzept & Skizze",
+        "text": "Aus den Gesprächen wird ein Raumkonzept: Stimmungen, Materialien, Grundrisse. Drei Entwürfe, eine klare Empfehlung."
+      },
+      {
+        "num": "PHASE 03",
+        "title": "Werkplanung",
+        "text": "Detail- und Möbelpläne, Ausschreibungen, Mustertafeln. Hier wird aus der Idee ein verbindliches Bauwerk."
+      },
+      {
+        "num": "PHASE 04",
+        "title": "Realisierung",
+        "text": "Bauleitung, Abnahme, Styling. Wir bleiben bis zur Vase auf dem Esstisch und der Pflanze im Bad."
+      }
     ]
   },
   "testimonials": [
@@ -183,7 +235,10 @@
   "journal": {
     "eyebrow": "Journal",
     "heading_html": "Aus dem <em>Studio</em>.",
-    "cta": { "label": "Alle Beiträge", "href": "#" },
+    "cta": {
+      "label": "Alle Beiträge",
+      "href": "#"
+    },
     "items": [
       {
         "image": "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?w=1200&q=85&auto=format&fit=crop",
@@ -212,6 +267,9 @@
     "eyebrow": "Erstgespräch",
     "heading_html": "Erzählen Sie uns von Ihrem <em>Vorhaben</em>.",
     "text": "Ob konkretes Projekt oder erste Idee – ein Erstgespräch in unserem Studio in der Berliner Vorstadt ist immer kostenlos und unverbindlich.",
-    "button": { "label": "Termin anfragen", "href": "/kontakt" }
+    "button": {
+      "label": "Termin anfragen",
+      "href": "/kontakt"
+    }
   }
 }

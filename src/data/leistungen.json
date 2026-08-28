@@ -1,4 +1,5 @@
 {
+  "preview_url": "/leistungen/",
   "title": "Leistungen – Raumwerk Innenarchitektur Potsdam",
   "description": "Konzeption, Innenarchitektur, Möbeldesign, Lichtplanung – das vollständige Leistungsspektrum von Raumwerk.",
   "hero": {
@@ -101,6 +102,9 @@
     "eyebrow": "Bereit?",
     "heading_html": "Lassen Sie uns <em>sprechen</em>.",
     "text": "Ein erstes Gespräch ist kostenlos und unverbindlich. Wir nehmen uns dafür eine Stunde Zeit – egal, ob daraus ein Projekt wird oder nicht.",
-    "button": { "label": "Erstgespräch anfragen", "href": "/kontakt" }
+    "button": {
+      "label": "Erstgespräch anfragen",
+      "href": "/kontakt"
+    }
   }
 }

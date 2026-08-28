@@ -1,8 +1,12 @@
 {
+  "preview_url": "/danke/",
   "title": "Vielen Dank – Raumwerk Innenarchitektur Potsdam",
   "description": "Ihre Anfrage ist bei uns eingegangen.",
   "breadcrumb": "Danke",
   "heading_html": "Vielen <em>Dank</em>.",
   "text": "Ihre Anfrage ist bei uns eingegangen – wir melden uns innerhalb von drei Werktagen bei Ihnen. Bis dahin freuen wir uns darauf, von Ihrem Vorhaben zu hören.",
-  "button": { "label": "Zurück zur Startseite", "href": "/" }
+  "button": {
+    "label": "Zurück zur Startseite",
+    "href": "/"
+  }
 }
