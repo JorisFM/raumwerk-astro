@@ -1,20 +1,19 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import page from '../data/datenschutz.json';
-import body from '../legal/datenschutz-body.html?raw';
-
-const { hero } = page;
+import { Content, frontmatter } from '../legal/datenschutz.md';
 ---
-<BaseLayout title={page.title} description={page.description}>
+<BaseLayout title={frontmatter.title} description={frontmatter.description}>
   <section class="page-hero">
     <div class="container">
-      <div class="breadcrumb"><a href="/">Studio</a> · {hero.breadcrumb}</div>
-      <h1 set:html={hero.heading_html}></h1>
-      <p>{hero.text}</p>
+      <div class="breadcrumb"><a href="/">Studio</a> · {frontmatter.breadcrumb}</div>
+      <h1 set:html={frontmatter.heading_html}></h1>
+      <p>{frontmatter.text}</p>
     </div>
   </section>
 
   <div class="container">
-    <div class="legal-content" set:html={body}></div>
+    <div class="legal-content">
+      <Content />
+    </div>
   </div>
 </BaseLayout>

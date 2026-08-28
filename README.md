@@ -37,9 +37,9 @@ src/
 │   ├── leistungen.json    # Phasen, Honorarpakete, FAQ
 │   ├── ueber-uns.json     # Story, Werte, Team, Auszeichnungen
 │   └── kontakt.json       # Kontaktblöcke, Formular-Optionen
-├── legal/                 # editierbare Rechtstexte (Rich-Text)
-│   ├── impressum-body.html
-│   └── datenschutz-body.html
+├── legal/                 # Rechtstexte als Markdown (Content-Editor / Rich-Text)
+│   ├── impressum.md
+│   └── datenschutz.md
 └── styles/
     └── style.css          # unverändert aus dem Original übernommen
 ```
@@ -60,7 +60,7 @@ Die Templates rendern nur noch daraus. Konfiguriert wird das in
 
 - **Data → site** — globale Inhalte (Navigation, Footer, Kontakt) aus `src/data/site.json`.
 - **Seiten** — je Seite eine JSON-Datei in `src/data/`, Bearbeitung als Formular.
-- **Rechtstexte** — Impressum/Datenschutz aus `src/legal/*.html`, Bearbeitung als Rich-Text.
+- **Rechtstexte** — Impressum/Datenschutz aus `src/legal/*.md`, Bearbeitung im Content-Editor (Rich-Text/WYSIWYG).
 
 Weil die `.astro`-Dateien reine Templates sind, tauchen sie nicht mehr als
 „bearbeitbarer Inhalt" auf – dadurch verschwindet die WYSIWYG-Fehlermeldung.

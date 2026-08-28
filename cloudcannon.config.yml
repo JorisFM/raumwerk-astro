@@ -5,7 +5,7 @@
 # editierbaren Datenquellen:
 #   - src/data/site.json        globale Inhalte (Navigation, Footer, Kontakt)
 #   - src/data/<seite>.json      Inhalt je Seite (Formular-Bearbeitung)
-#   - src/legal/<seite>.html     Rechtstexte (Rich-Text-Bearbeitung)
+#   - src/legal/<seite>.md       Rechtstexte als Markdown (Content-/Rich-Text-Editor)
 #
 # Die .astro-Dateien sind reine Templates und tauchen daher nicht als
 # bearbeitbarer Inhalt auf – deshalb verschwindet die WYSIWYG-Fehlermeldung.
@@ -39,12 +39,13 @@ collections_config:
     name: Rechtstexte
     icon: gavel
     glob:
-      - '*.html'
+      - '*.md'
     disable_add: true
     disable_add_folder: true
     disable_url: true
     _enabled_editors:
       - content
+      - data
 
 # Reihenfolge/Gruppierung in der Seitenleiste.
 collection_groups:
