@@ -82,8 +82,10 @@ collections_config:
       - '!site.json'
     disable_add: true
     disable_add_folder: true
-    disable_url: true
+    # Visual Editor (On-Page-WYSIWYG) via @cloudcannon/editable-regions.
+    # Die Startseite (home.json) trägt bereits data-editable-Bindings.
     _enabled_editors:
+      - visual
       - data
   legal:
     path: src/legal

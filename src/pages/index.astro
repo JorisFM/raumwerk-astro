@@ -10,9 +10,9 @@ const t0 = testimonials[0];
   <header class="hero">
     <div class="hero-image" style={`background-image: url('${hero.image}');`}></div>
     <div class="container hero-content">
-      <span class="eyebrow">{hero.eyebrow}</span>
-      <h1 set:html={hero.heading_html}></h1>
-      <p class="hero-sub">{hero.sub}</p>
+      <span class="eyebrow" data-editable="text" data-prop="hero.eyebrow">{hero.eyebrow}</span>
+      <h1 set:html={hero.heading_html} data-editable="text" data-type="block" data-prop="hero.heading_html"></h1>
+      <p class="hero-sub" data-editable="text" data-prop="hero.sub">{hero.sub}</p>
       <a href={hero.cta.href} class="btn btn-light btn-arrow">{hero.cta.label}</a>
     </div>
     <div class="hero-meta" set:html={hero.meta_html}></div>
@@ -35,8 +35,8 @@ const t0 = testimonials[0];
     <div class="container">
       <div class="intro-grid">
         <div class="intro-text fade-in">
-          <span class="eyebrow">{intro.eyebrow}</span>
-          <h2 set:html={intro.heading_html}></h2>
+          <span class="eyebrow" data-editable="text" data-prop="intro.eyebrow">{intro.eyebrow}</span>
+          <h2 set:html={intro.heading_html} data-editable="text" data-type="block" data-prop="intro.heading_html"></h2>
           {intro.paragraphs.map((p) => (<p>{p}</p>))}
           <div class="intro-stats">
             {intro.stats.map((s) => (
@@ -180,9 +180,9 @@ const t0 = testimonials[0];
   <!-- CTA -->
   <section class="cta-section">
     <div class="container-narrow fade-in">
-      <span class="eyebrow">{cta.eyebrow}</span>
-      <h2 set:html={cta.heading_html}></h2>
-      <p>{cta.text}</p>
+      <span class="eyebrow" data-editable="text" data-prop="cta.eyebrow">{cta.eyebrow}</span>
+      <h2 set:html={cta.heading_html} data-editable="text" data-type="block" data-prop="cta.heading_html"></h2>
+      <p data-editable="text" data-prop="cta.text">{cta.text}</p>
       <a href={cta.button.href} class="btn btn-light btn-arrow">{cta.button.label}</a>
     </div>
   </section>

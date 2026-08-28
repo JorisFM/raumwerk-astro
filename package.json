@@ -11,6 +11,7 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^4.16.18"
+    "@cloudcannon/editable-regions": "^0.0.19",
+    "astro": "^5.18.2"
   }
 }
