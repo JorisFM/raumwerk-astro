@@ -1,0 +1,79 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import projektePage from '../../data/projekte.json';
+
+// Eine statische Seite je Projekt aus der Collection.
+export async function getStaticPaths() {
+  const projekte = (await getCollection('projekte')).sort(
+    (a, b) => a.data.order - b.data.order
+  );
+  return projekte.map((entry, index) => ({
+    params: { slug: entry.slug },
+    props: { entry, index },
+  }));
+}
+
+const { entry, index } = Astro.props;
+const { data } = entry;
+const { Content } = await entry.render();
+const num = `No. ${String(index + 1).padStart(2, '0')}`;
+const cta = projektePage.cta;
+---
+<BaseLayout
+  title={`${data.title} – Raumwerk Innenarchitektur Potsdam`}
+  description={`${data.category} · ${data.location} – Projekt von Raumwerk Innenarchitektur, Potsdam.`}
+  active="projekte"
+>
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="/">Studio</a> · <a href="/projekte">Projekte</a> · {data.title}</div>
+      <h1>{data.title}</h1>
+      <p>{data.category} · {data.location}</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <article class="case-study">
+        <div class="case-image">
+          <span class="case-num">{num}</span>
+          <img src={data.image} alt={data.image_alt}>
+        </div>
+        <div class="case-info">
+          <div class="case-meta">
+            <span>{data.category}</span>
+            <span class="sep"></span>
+            <span>{data.location}</span>
+          </div>
+          <div class="case-body">
+            <Content />
+          </div>
+          {data.facts.length > 0 && (
+            <div class="case-facts">
+              {data.facts.map((f) => (
+                <div class="case-fact"><div class="label">{f.label}</div><div class="val">{f.val}</div></div>
+              ))}
+            </div>
+          )}
+          {data.tags.length > 0 && (
+            <div class="case-tags">
+              {data.tags.map((tag) => (<span>{tag}</span>))}
+            </div>
+          )}
+          <a href="/projekte" class="btn btn-arrow" style="margin-top: 2rem;">Alle Projekte</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container-narrow fade-in">
+      <span class="eyebrow">{cta.eyebrow}</span>
+      <h2 set:html={cta.heading_html}></h2>
+      <p>{cta.text}</p>
+      <a href={cta.button.href} class="btn btn-light btn-arrow">{cta.button.label}</a>
+    </div>
+  </section>
+</BaseLayout>

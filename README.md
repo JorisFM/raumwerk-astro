@@ -29,7 +29,12 @@ src/
 │   ├── ueber-uns.astro    # /ueber-uns
 │   ├── kontakt.astro      # /kontakt
 │   ├── impressum.astro    # /impressum
-│   └── datenschutz.astro  # /datenschutz
+│   ├── datenschutz.astro  # /datenschutz
+│   └── projekte/
+│       └── [slug].astro   # /projekte/<slug> – Detailseite je Projekt (dynamisch)
+├── content/
+│   ├── config.ts          # Schema der Projekte-Collection
+│   └── projekte/          # ein .md pro Projekt (Custom Post Type)
 ├── data/                  # editierbare Inhalte (CloudCannon)
 │   ├── site.json          # global: Navigation, Footer, Kontaktdaten
 │   ├── home.json          # Inhalt der Startseite
@@ -61,6 +66,20 @@ Die Templates rendern nur noch daraus. Konfiguriert wird das in
 - **Data → site** — globale Inhalte (Navigation, Footer, Kontakt) aus `src/data/site.json`.
 - **Seiten** — je Seite eine JSON-Datei in `src/data/`, Bearbeitung als Formular.
 - **Rechtstexte** — Impressum/Datenschutz aus `src/legal/*.md`, Bearbeitung im Content-Editor (Rich-Text/WYSIWYG).
+
+### Projekte als Collection (Custom Post Type)
+
+Jedes Projekt ist eine eigene Markdown-Datei in `src/content/projekte/`. In CloudCannon
+erscheint dafür die Sammlung **Projekte**; über **„Add"** legt der Kunde ein neues Projekt an
+(Vorlage: `.cloudcannon/schemas/projekt.md`). Beim nächsten Build erzeugt Astro daraus
+automatisch:
+
+- die Übersicht `/projekte` (Karten-Raster, sortiert nach `order`) und
+- eine Detailseite `/projekte/<slug>` (Slug = Dateiname).
+
+Felder je Projekt (`src/content/config.ts` erzwingt das Schema): `title`, `category`,
+`location`, `year`, `order`, `size` (Kachelgröße), `image`, `image_alt`, `facts` (Liste aus
+Label/Wert), `tags` (Liste) sowie der Markdown-Body als Projektbeschreibung.
 
 Weil die `.astro`-Dateien reine Templates sind, tauchen sie nicht mehr als
 „bearbeitbarer Inhalt" auf – dadurch verschwindet die WYSIWYG-Fehlermeldung.

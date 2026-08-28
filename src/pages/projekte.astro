@@ -1,8 +1,14 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
 import page from '../data/projekte.json';
 
-const { hero, cases, numbers, cta } = page;
+const { hero, numbers, cta } = page;
+
+// Alle Projekte aus der Collection, sortiert nach `order`.
+const projekte = (await getCollection('projekte')).sort(
+  (a, b) => a.data.order - b.data.order
+);
 ---
 <BaseLayout title={page.title} description={page.description} active="projekte">
   <section class="page-hero">
@@ -13,34 +19,23 @@ const { hero, cases, numbers, cta } = page;
     </div>
   </section>
 
-  <!-- Case Studies -->
+  <!-- Projekt-Übersicht -->
   <section>
     <div class="container">
-      {cases.map((c) => (
-        <article class="case-study fade-in">
-          <div class="case-image">
-            <span class="case-num">{c.num}</span>
-            <img src={c.image} alt={c.image_alt}>
-          </div>
-          <div class="case-info">
-            <div class="case-meta">
-              <span>{c.category}</span>
-              <span class="sep"></span>
-              <span>{c.location}</span>
+      <div class="projects-grid fade-in">
+        {projekte.map((p) => (
+          <a class:list={['project-card', p.data.size]} href={`/projekte/${p.slug}`}>
+            <div class="img-wrap"><img src={p.data.image} alt={p.data.image_alt}></div>
+            <div class="meta">
+              <div>
+                <div class="cat">{p.data.category}</div>
+                <h4>{p.data.title}</h4>
+              </div>
+              <span class="year">{p.data.year}</span>
             </div>
-            <h3>{c.title}</h3>
-            <p>{c.text}</p>
-            <div class="case-facts">
-              {c.facts.map((f) => (
-                <div class="case-fact"><div class="label">{f.label}</div><div class="val">{f.val}</div></div>
-              ))}
-            </div>
-            <div class="case-tags">
-              {c.tags.map((tag) => (<span>{tag}</span>))}
-            </div>
-          </div>
-        </article>
-      ))}
+          </a>
+        ))}
+      </div>
     </div>
   </section>
 

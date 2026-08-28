@@ -3,7 +3,8 @@
 #
 # Die Inhalte liegen bewusst NICHT mehr fest in den .astro-Dateien, sondern in
 # editierbaren Datenquellen:
-#   - src/data/site.json        globale Inhalte (Navigation, Footer, Kontakt)
+#   - src/content/projekte/*.md  Projekte als Sammlung (Custom Post Type)
+#   - src/data/site.json         globale Inhalte (Navigation, Footer, Kontakt)
 #   - src/data/<seite>.json      Inhalt je Seite (Formular-Bearbeitung)
 #   - src/legal/<seite>.md       Rechtstexte als Markdown (Content-/Rich-Text-Editor)
 #
@@ -22,6 +23,56 @@ data_config:
 
 # Bearbeitbare Sammlungen.
 collections_config:
+  # Projekte = Custom-Post-Type-artige Sammlung. Jede .md ist ein Projekt.
+  # „Add" legt ein neues Projekt an (Vorlage: .cloudcannon/schemas/projekt.md);
+  # Astro generiert daraus Übersicht (/projekte) und Detailseite (/projekte/<slug>).
+  projekte:
+    path: src/content/projekte
+    name: Projekte
+    icon: photo_library
+    url: '/projekte/[slug]/'
+    schemas:
+      default:
+        path: .cloudcannon/schemas/projekt.md
+        name: Neues Projekt
+    _enabled_editors:
+      - content
+    _inputs:
+      category:
+        type: text
+        comment: z. B. „Privates Wohnen", „Gastronomie", „Hotellerie".
+      location:
+        type: text
+        comment: Ort und Jahr, z. B. „Potsdam · 2024".
+      year:
+        type: text
+      order:
+        type: number
+        comment: Sortierung in der Übersicht (kleiner = weiter oben).
+      size:
+        type: select
+        options:
+          values:
+            - large
+            - medium
+            - small
+            - full
+        comment: Kachelgröße in der Übersicht.
+      image:
+        type: image
+      image_alt:
+        type: text
+        comment: Bildbeschreibung für Barrierefreiheit/SEO.
+      facts:
+        type: array
+        options:
+          structures:
+            values:
+              - value:
+                  label: ""
+                  val: ""
+      tags:
+        type: array
   pages:
     path: src/data
     name: Seiten
@@ -51,6 +102,7 @@ collections_config:
 collection_groups:
   - heading: Inhalte
     collections:
+      - projekte
       - pages
       - legal
 
