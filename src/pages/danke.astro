@@ -1,0 +1,19 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import page from '../data/danke.json';
+---
+<BaseLayout title={page.title} description={page.description}>
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="/">Studio</a> · {page.breadcrumb}</div>
+      <h1 set:html={page.heading_html}></h1>
+      <p>{page.text}</p>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="container-narrow">
+      <a href={page.button.href} class="btn btn-light btn-arrow">{page.button.label}</a>
+    </div>
+  </section>
+</BaseLayout>

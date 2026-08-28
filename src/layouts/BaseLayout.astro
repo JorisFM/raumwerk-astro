@@ -141,22 +141,17 @@ const { title, description, active } = Astro.props;
       }, 7000);
     }
 
-    // Form submit
+    // Contact form: the form posts natively to CloudCannon (see kontakt.astro),
+    // which redirects to the success page. We only give a "sending…" hint here
+    // WITHOUT preventing the real submission.
     const contactForm = document.querySelector<HTMLFormElement>('.contact-form form');
     if (contactForm) {
-      contactForm.addEventListener('submit', (e) => {
-        e.preventDefault();
+      contactForm.addEventListener('submit', () => {
         const btn = contactForm.querySelector<HTMLButtonElement>('button[type="submit"]');
-        if (!btn) return;
-        const originalText = btn.textContent;
-        btn.textContent = 'Wird gesendet…';
-        setTimeout(() => {
-          btn.textContent = '✓ Vielen Dank';
-          contactForm.reset();
-          setTimeout(() => {
-            btn.textContent = originalText;
-          }, 2500);
-        }, 800);
+        if (btn) {
+          btn.textContent = 'Wird gesendet…';
+          btn.disabled = true;
+        }
       });
     }
   </script>

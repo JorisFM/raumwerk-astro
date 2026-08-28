@@ -99,4 +99,7 @@ frühe Version und sollte gegen eine echte CloudCannon-Instanz getestet werden.
 - Die Bilder werden weiterhin von Unsplash geladen. Für einen produktiven Auftritt
   empfiehlt es sich, sie lokal in `public/` oder `src/assets/` abzulegen und über
   Astros `<Image />`-Komponente auszuliefern.
-- Das Kontaktformular ist wie im Original nur eine Frontend-Attrappe (kein Versand).
+- Das Kontaktformular nutzt **CloudCannon Forms**: es postet an eine Inbox
+  (`inbox_key` in `src/data/kontakt.json`) und leitet auf `/danke` weiter.
+  Damit Einsendungen ankommen, muss in CloudCannon unter **Hosting → Forms** eine
+  Inbox mit dem passenden Key (`raumwerk_kontakt`) verknüpft sein.

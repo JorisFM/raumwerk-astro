@@ -36,6 +36,8 @@
   "form": {
     "heading": "Anfrage senden",
     "intro": "Wir melden uns innerhalb von drei Werktagen.",
+    "inbox_key": "raumwerk_kontakt",
+    "success_url": "/danke/",
     "project_types": [
       "Privates Wohnen",
       "Gastronomie",
