@@ -1,16 +1,16 @@
 ---
 _schema: default
-title: Loft Charlottenburg
-category: Privates Wohnen
+title: Neues Testprojekt
+category: Gstronomie1
 location: Berlin · 2023
-year: '2023'
-order: 4
+year: '2030'
+order: 1
 size: medium
-image: https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=1600&q=85&auto=format&fit=crop
-image_alt: Loft Charlottenburg
+image: /uploads/joris-pb-oberko-rper.png
+image_alt: Joris Profiltest
 facts:
   - label: Fläche
-    val: 180 m² · 5,2 m Höhe
+    val: 1.000 m² · 50,2 m Höhe
   - label: Leistungsphasen
     val: LP 2 – 8
   - label: Bauzeit
@@ -18,7 +18,7 @@ facts:
   - label: Auszeichnung
     val: Iconic Awards 2023
 tags:
-  - Sichtbeton
+  - Betonzeug
   - Geseifte Eiche
   - Walzstahl
   - Glasfassade
