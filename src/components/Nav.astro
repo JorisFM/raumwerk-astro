@@ -1,25 +1,21 @@
 ---
-// Shared top navigation. Pass `active` to highlight the current page.
-// Values: "studio" | "projekte" | "leistungen" | "ueber-uns" | "kontakt"
+// Shared top navigation. Content comes from src/data/site.json (editable in CloudCannon).
+// Pass `active` to highlight the current page.
+import site from '../data/site.json';
+
 interface Props {
   active?: string;
 }
 const { active } = Astro.props;
-
-const links = [
-  { href: '/', label: 'Studio', key: 'studio' },
-  { href: '/projekte', label: 'Projekte', key: 'projekte' },
-  { href: '/leistungen', label: 'Leistungen', key: 'leistungen' },
-  { href: '/ueber-uns', label: 'Über uns', key: 'ueber-uns' },
-];
+const { brand, nav, nav_cta } = site;
 ---
 <nav class="nav">
-  <a href="/" class="nav-logo">Raumwerk<span class="dot"></span></a>
+  <a href="/" class="nav-logo">{brand}<span class="dot"></span></a>
   <ul class="nav-links">
-    {links.map((l) => (
+    {nav.map((l) => (
       <li><a href={l.href} class:list={[{ active: active === l.key }]}>{l.label}</a></li>
     ))}
-    <li><a href="/kontakt" class:list={['nav-cta', { active: active === 'kontakt' }]}>Kontakt</a></li>
+    <li><a href={nav_cta.href} class:list={['nav-cta', { active: active === nav_cta.key }]}>{nav_cta.label}</a></li>
   </ul>
   <div class="burger"><span></span><span></span><span></span></div>
 </nav>

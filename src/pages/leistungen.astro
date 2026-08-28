@@ -1,101 +1,69 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import page from '../data/leistungen.json';
+
+const { hero, phases, packages_section, faq_section, cta } = page;
 ---
-<BaseLayout
-  title="Leistungen – Raumwerk Innenarchitektur Potsdam"
-  description="Konzeption, Innenarchitektur, Möbeldesign, Lichtplanung – das vollständige Leistungsspektrum von Raumwerk."
-  active="leistungen"
->
+<BaseLayout title={page.title} description={page.description} active="leistungen">
   <section class="page-hero">
     <div class="container">
-      <div class="breadcrumb"><a href="/">Studio</a> · Leistungen</div>
-      <h1>Vom Aufmaß<br>zur <em>Schlüsselübergabe</em>.</h1>
-      <p>Wir arbeiten nach den Leistungsphasen 1 bis 9 der HOAI – und gehen darüber hinaus, wo es zählt: Material, Licht, Möbel, Stoff, das Styling am Eröffnungstag.</p>
+      <div class="breadcrumb"><a href="/">Studio</a> · {hero.breadcrumb}</div>
+      <h1 set:html={hero.heading_html}></h1>
+      <p>{hero.text}</p>
     </div>
   </section>
 
   <!-- Leistungen Detail -->
-  <section>
-    <div class="container">
-      <div class="intro-grid">
-        <div class="intro-text fade-in">
-          <span class="eyebrow">Phase 01 – 02</span>
-          <h2>Konzeption &<br><em>Vorentwurf</em>.</h2>
-          <p>Jedes Projekt beginnt bei uns mit einem ausführlichen Erstgespräch und einer Bestandsaufnahme vor Ort. Wir hören zu, schauen, messen, fotografieren – und entwickeln daraus ein Raumkonzept, das auf Ihre Lebens- oder Geschäftsrealität zugeschnitten ist.</p>
-          <p>Die erste Präsentation enthält Stimmungsbilder, drei mögliche Raumkonzepte, eine Materialempfehlung und eine offene Kostenindikation. Hier entsteht die Richtung.</p>
-        </div>
-        <div class="intro-image fade-in fade-in-delay-1">
-          <img src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?w=1200&q=85&auto=format&fit=crop" alt="Konzeption">
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section style="background: var(--bg-warm);">
-    <div class="container">
-      <div class="intro-grid">
-        <div class="intro-image fade-in">
-          <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1200&q=85&auto=format&fit=crop" alt="Werkplanung">
-        </div>
-        <div class="intro-text fade-in fade-in-delay-1">
-          <span class="eyebrow">Phase 03 – 05</span>
-          <h2>Entwurf &<br><em>Werkplanung</em>.</h2>
-          <p>Aus dem gewählten Konzept entsteht der verbindliche Entwurf: Grundrisse, Schnitte, Detailpläne, Möbelaufstellungen, Materialtafeln. Wir erstellen die Werkplanung intern – jede Schreinerei, die mit uns arbeitet, bestätigt: hier denkt jemand das Maß zu Ende.</p>
-          <p>Auch die Genehmigungsplanung übernehmen wir, sofern Ihr Projekt sie erfordert. Tobias, unser bauvorlageberechtigter Architekt, kennt die Behörden in Potsdam und Berlin – und sie ihn.</p>
+  {phases.map((ph) => (
+    <section style={ph.warm ? 'background: var(--bg-warm);' : undefined}>
+      <div class="container">
+        <div class="intro-grid">
+          {ph.image_first && (
+            <div class="intro-image fade-in">
+              <img src={ph.image} alt={ph.image_alt}>
+            </div>
+          )}
+          <div class:list={['intro-text', 'fade-in', ph.image_first && 'fade-in-delay-1']}>
+            <span class="eyebrow">{ph.eyebrow}</span>
+            <h2 set:html={ph.heading_html}></h2>
+            {ph.paragraphs.map((p) => (<p>{p}</p>))}
+          </div>
+          {!ph.image_first && (
+            <div class="intro-image fade-in fade-in-delay-1">
+              <img src={ph.image} alt={ph.image_alt}>
+            </div>
+          )}
         </div>
       </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="container">
-      <div class="intro-grid">
-        <div class="intro-text fade-in">
-          <span class="eyebrow">Phase 06 – 09</span>
-          <h2>Ausschreibung,<br>Bauleitung &<br><em>Übergabe</em>.</h2>
-          <p>Wir schreiben Gewerke aus, vergleichen Angebote, vergeben in Ihrem Namen. Während der Bauphase sind wir mindestens einmal wöchentlich auf der Baustelle – bei Hotelprojekten täglich.</p>
-          <p>Am Ende stehen Abnahme, Mängelmanagement und – das Beste – das Styling. Wir stellen Ihre Bibliothek ein, hängen die Bilder, decken den ersten Tisch. Die Schlüsselübergabe ist bei uns kein Ende, sondern ein Empfang.</p>
-        </div>
-        <div class="intro-image fade-in fade-in-delay-1">
-          <img src="https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?w=1200&q=85&auto=format&fit=crop" alt="Übergabe">
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
+  ))}
 
   <!-- Leistungspaket Tabelle -->
   <section style="background: var(--bg-dark); color: var(--cream);">
     <div class="container">
       <div class="services-header fade-in">
         <div>
-          <span class="eyebrow" style="color: var(--accent);">Honorarpakete</span>
-          <h2 style="color: var(--cream);">Drei Modelle, <em>klar geordnet</em>.</h2>
+          <span class="eyebrow" style="color: var(--accent);">{packages_section.eyebrow}</span>
+          <h2 style="color: var(--cream);" set:html={packages_section.heading_html}></h2>
         </div>
-        <p class="lead" style="color: rgba(250, 246, 239, 0.7);">Wir arbeiten je nach Projekt nach Pauschale, HOAI oder Stundensatz. Hier eine Orientierung.</p>
+        <p class="lead" style="color: rgba(250, 246, 239, 0.7);">{packages_section.lead}</p>
       </div>
 
       <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 4rem;">
-        <div class="fade-in" style="border-top: 1px solid rgba(216, 207, 192, 0.3); padding: 2rem 0;">
-          <div style="font-family: var(--serif); font-style: italic; color: var(--accent); font-size: 1.1rem; margin-bottom: 1rem;">Paket 01</div>
-          <h3 style="color: var(--cream); margin-bottom: 1rem;">Beratung</h3>
-          <p style="color: rgba(250, 246, 239, 0.7); margin-bottom: 1.5rem;">Eine Halbtagesberatung im Studio oder bei Ihnen vor Ort. Mit schriftlicher Empfehlung.</p>
-          <div style="font-family: var(--serif); font-size: 2rem; color: var(--cream);">ab 690&nbsp;€</div>
-          <div style="font-size: 0.78rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(250, 246, 239, 0.5); margin-top: 0.5rem;">zzgl. MwSt.</div>
-        </div>
-        <div class="fade-in fade-in-delay-1" style="border-top: 2px solid var(--accent); padding: 2rem 0;">
-          <div style="font-family: var(--serif); font-style: italic; color: var(--accent); font-size: 1.1rem; margin-bottom: 1rem;">Paket 02 · Empfohlen</div>
-          <h3 style="color: var(--cream); margin-bottom: 1rem;">Konzept</h3>
-          <p style="color: rgba(250, 246, 239, 0.7); margin-bottom: 1.5rem;">Vom Aufmaß bis zum verbindlichen Vorentwurf inklusive Materialempfehlung und Kostenindikation.</p>
-          <div style="font-family: var(--serif); font-size: 2rem; color: var(--cream);">ab 4.800&nbsp;€</div>
-          <div style="font-size: 0.78rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(250, 246, 239, 0.5); margin-top: 0.5rem;">zzgl. MwSt.</div>
-        </div>
-        <div class="fade-in fade-in-delay-2" style="border-top: 1px solid rgba(216, 207, 192, 0.3); padding: 2rem 0;">
-          <div style="font-family: var(--serif); font-style: italic; color: var(--accent); font-size: 1.1rem; margin-bottom: 1rem;">Paket 03</div>
-          <h3 style="color: var(--cream); margin-bottom: 1rem;">Vollbetreuung</h3>
-          <p style="color: rgba(250, 246, 239, 0.7); margin-bottom: 1.5rem;">Leistungsphasen 1 – 9 nach HOAI inklusive Werkplanung, Bauleitung und Schlüsselübergabe.</p>
-          <div style="font-family: var(--serif); font-size: 2rem; color: var(--cream);">individuell</div>
-          <div style="font-size: 0.78rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(250, 246, 239, 0.5); margin-top: 0.5rem;">nach Aufwand</div>
-        </div>
+        {packages_section.packages.map((pkg, i) => (
+          <div
+            class:list={['fade-in', i > 0 && `fade-in-delay-${i}`]}
+            style={pkg.featured
+              ? 'border-top: 2px solid var(--accent); padding: 2rem 0;'
+              : 'border-top: 1px solid rgba(216, 207, 192, 0.3); padding: 2rem 0;'}
+          >
+            <div style="font-family: var(--serif); font-style: italic; color: var(--accent); font-size: 1.1rem; margin-bottom: 1rem;">{pkg.tag}</div>
+            <h3 style="color: var(--cream); margin-bottom: 1rem;">{pkg.title}</h3>
+            <p style="color: rgba(250, 246, 239, 0.7); margin-bottom: 1.5rem;">{pkg.text}</p>
+            <div style="font-family: var(--serif); font-size: 2rem; color: var(--cream);" set:html={pkg.price_html}></div>
+            <div style="font-size: 0.78rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(250, 246, 239, 0.5); margin-top: 0.5rem;">{pkg.price_note}</div>
+          </div>
+        ))}
       </div>
     </div>
   </section>
@@ -105,43 +73,26 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <div class="container">
       <div class="services-header fade-in">
         <div>
-          <span class="eyebrow">Häufige Fragen</span>
-          <h2>Was Bauherrinnen <em>oft fragen</em>.</h2>
+          <span class="eyebrow">{faq_section.eyebrow}</span>
+          <h2 set:html={faq_section.heading_html}></h2>
         </div>
       </div>
 
       <div style="max-width: 820px; margin: 3rem 0 0;">
-        <details class="fade-in" style="border-top: 1px solid var(--line); padding: 1.5rem 0; cursor: pointer;">
-          <summary style="font-family: var(--serif); font-size: 1.4rem; color: var(--ink); list-style: none; display: flex; justify-content: space-between; align-items: center;">
-            Wie groß sollte mein Projekt mindestens sein?
-            <span style="color: var(--accent); font-size: 1.5rem;">+</span>
-          </summary>
-          <p style="margin-top: 1rem; font-size: 1.02rem;">Wir nehmen Wohnungsprojekte ab ca. 80 m² an, gewerbliche Projekte ab ca. 150 m². Für kleinere Vorhaben bieten wir das Beratungspaket – darin lassen sich oft die wichtigsten Weichen stellen.</p>
-        </details>
-
-        <details class="fade-in fade-in-delay-1" style="border-top: 1px solid var(--line); padding: 1.5rem 0; cursor: pointer;">
-          <summary style="font-family: var(--serif); font-size: 1.4rem; color: var(--ink); list-style: none; display: flex; justify-content: space-between; align-items: center;">
-            Mit welchen Kosten muss ich grob rechnen?
-            <span style="color: var(--accent); font-size: 1.5rem;">+</span>
-          </summary>
-          <p style="margin-top: 1rem; font-size: 1.02rem;">Für hochwertige Innenausbauten kalkulieren unsere Bauherrinnen meist zwischen 1.800 € und 3.500 € pro Quadratmeter (zzgl. unseres Honorars). Die genaue Spanne ergibt sich aus Ausstattungsniveau, Bestandszustand und gewählten Manufakturen.</p>
-        </details>
-
-        <details class="fade-in" style="border-top: 1px solid var(--line); padding: 1.5rem 0; cursor: pointer;">
-          <summary style="font-family: var(--serif); font-size: 1.4rem; color: var(--ink); list-style: none; display: flex; justify-content: space-between; align-items: center;">
-            Wie lange dauert ein Projekt typischerweise?
-            <span style="color: var(--accent); font-size: 1.5rem;">+</span>
-          </summary>
-          <p style="margin-top: 1rem; font-size: 1.02rem;">Eine Wohnungssanierung benötigt von Beauftragung bis Schlüsselübergabe ca. 9 – 14 Monate, ein Hotel- oder Gastronomieprojekt 12 – 20 Monate. Davon entfallen rund vier Monate auf Konzept und Werkplanung, der Rest auf Genehmigung und Bau.</p>
-        </details>
-
-        <details class="fade-in fade-in-delay-1" style="border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 1.5rem 0; cursor: pointer;">
-          <summary style="font-family: var(--serif); font-size: 1.4rem; color: var(--ink); list-style: none; display: flex; justify-content: space-between; align-items: center;">
-            Arbeiten Sie auch außerhalb von Berlin und Potsdam?
-            <span style="color: var(--accent); font-size: 1.5rem;">+</span>
-          </summary>
-          <p style="margin-top: 1rem; font-size: 1.02rem;">Ja – wir betreuen regelmäßig Projekte in Hamburg, München, Leipzig und Wien. Reisen wir an, klären wir die Aufwände vorab transparent. Manche unserer schönsten Arbeiten sind in Brandenburger Dörfern entstanden.</p>
-        </details>
+        {faq_section.items.map((item, i) => (
+          <details
+            class:list={['fade-in', i % 2 === 1 && 'fade-in-delay-1']}
+            style={i === faq_section.items.length - 1
+              ? 'border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 1.5rem 0; cursor: pointer;'
+              : 'border-top: 1px solid var(--line); padding: 1.5rem 0; cursor: pointer;'}
+          >
+            <summary style="font-family: var(--serif); font-size: 1.4rem; color: var(--ink); list-style: none; display: flex; justify-content: space-between; align-items: center;">
+              {item.question}
+              <span style="color: var(--accent); font-size: 1.5rem;">+</span>
+            </summary>
+            <p style="margin-top: 1rem; font-size: 1.02rem;">{item.answer}</p>
+          </details>
+        ))}
       </div>
     </div>
   </section>
@@ -149,10 +100,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <!-- CTA -->
   <section class="cta-section">
     <div class="container-narrow fade-in">
-      <span class="eyebrow">Bereit?</span>
-      <h2>Lassen Sie uns <em>sprechen</em>.</h2>
-      <p>Ein erstes Gespräch ist kostenlos und unverbindlich. Wir nehmen uns dafür eine Stunde Zeit – egal, ob daraus ein Projekt wird oder nicht.</p>
-      <a href="/kontakt" class="btn btn-light btn-arrow">Erstgespräch anfragen</a>
+      <span class="eyebrow">{cta.eyebrow}</span>
+      <h2 set:html={cta.heading_html}></h2>
+      <p>{cta.text}</p>
+      <a href={cta.button.href} class="btn btn-light btn-arrow">{cta.button.label}</a>
     </div>
   </section>
 </BaseLayout>

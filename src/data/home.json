@@ -1,0 +1,217 @@
+{
+  "title": "Raumwerk – Innenarchitektur Studio Potsdam",
+  "description": "Raumwerk ist ein Innenarchitektur-Studio aus Potsdam. Wir entwerfen Räume mit Charakter – für private Bauherren, Gastronomie und Hotellerie.",
+  "hero": {
+    "image": "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=2400&q=85&auto=format&fit=crop",
+    "eyebrow": "Innenarchitektur Studio · Potsdam",
+    "heading_html": "Räume,<br>die <em>bleiben</em>.",
+    "sub": "Wir entwerfen Innenräume mit Charakter und Beständigkeit – aus Brandenburg, für Menschen, die das Echte suchen.",
+    "cta": { "label": "Projekte ansehen", "href": "/projekte" },
+    "meta_html": "Est. 2014<br>52° 24′ N · 13° 04′ E<br>Potsdam · Berlin"
+  },
+  "marquee": [
+    "Wohnräume", "Hotellerie", "Gastronomie", "Möbeldesign", "Lichtkonzepte", "Materialwelten"
+  ],
+  "intro": {
+    "eyebrow": "Studio",
+    "heading_html": "Ein Handwerk aus <em>Geduld</em>, Material und Licht.",
+    "paragraphs": [
+      "Raumwerk wurde 2014 in einer alten Zigarrenfabrik in der Potsdamer Berliner Vorstadt gegründet. Was als Atelier zweier Innenarchitekt:innen begann, ist heute ein interdisziplinäres Studio mit acht festen Mitarbeiter:innen.",
+      "Wir glauben an Räume, die nicht nur fotografiert werden können, sondern bewohnt. An Materialien, die altern dürfen. An eine Gestaltung, die sich nicht in den Vordergrund drängt – sondern Platz lässt für das, was hineinwächst."
+    ],
+    "stats": [
+      { "num": "11", "label": "Jahre Studio" },
+      { "num": "87", "label": "Realisierte Projekte" },
+      { "num": "8", "label": "Köpfe im Team" }
+    ],
+    "image": "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=1200&q=85&auto=format&fit=crop",
+    "image_alt": "Wohnzimmer mit warmem Licht und Naturmaterialien"
+  },
+  "services": {
+    "eyebrow": "Leistungen",
+    "heading_html": "Was wir tun, <em>wie wir es tun</em>.",
+    "lead": "Vom ersten Aufmaß bis zur letzten Türklinke – wir begleiten Bauherrinnen und Betreiber durch jede Phase. Konzeptstark, handwerklich präzise, atmosphärisch klar.",
+    "tabs": [
+      {
+        "id": "wohnen",
+        "label": "Wohnräume",
+        "num": "01",
+        "image": "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=1400&q=85&auto=format&fit=crop",
+        "image_alt": "Privates Wohnen",
+        "title": "Privates Wohnen",
+        "text": "Vom Stadtapartment in Babelsberg bis zur Villa am Heiligen See: wir entwerfen Wohnungen, die nicht zum Statement werden – sondern zum Alltag passen.",
+        "items": [
+          "Konzeption & Raumplanung",
+          "Material- und Farbentwicklung",
+          "Maßmöbel und feste Einbauten",
+          "Bauleitung und Gewerkekoordination"
+        ],
+        "cta": { "label": "Mehr erfahren", "href": "/leistungen" }
+      },
+      {
+        "id": "gastro",
+        "label": "Gastronomie",
+        "num": "02",
+        "image": "https://images.unsplash.com/photo-1559339352-11d035aa65de?w=1400&q=85&auto=format&fit=crop",
+        "image_alt": "Gastronomie Innenraum",
+        "title": "Gastronomie",
+        "text": "Räume, in denen man bleiben möchte. Wir entwickeln Gastronomiekonzepte, die zur Marke passen, im Betrieb funktionieren und auch nach fünf Jahren noch tragen.",
+        "items": [
+          "Markenraum & Storytelling",
+          "Akustik-, Licht- und Wegeplanung",
+          "Möblierung und Sondertische",
+          "Genehmigungs- und Werkplanung"
+        ],
+        "cta": { "label": "Mehr erfahren", "href": "/leistungen" }
+      },
+      {
+        "id": "hotel",
+        "label": "Hotellerie",
+        "num": "03",
+        "image": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=1400&q=85&auto=format&fit=crop",
+        "image_alt": "Boutique Hotel",
+        "title": "Hotellerie",
+        "text": "Boutique-Hotels und Suiten, die sich anfühlen wie das Zuhause eines reisefreudigen Menschen mit Geschmack. Vom Lobbykonzept bis zur Bademantelfarbe.",
+        "items": [
+          "FF&E – Furniture, Fixtures, Equipment",
+          "Suite-Typologien & Mock-up Rooms",
+          "Restaurant-, Spa- und Lobbygestaltung",
+          "Branding-Schnittstelle und Signage"
+        ],
+        "cta": { "label": "Mehr erfahren", "href": "/leistungen" }
+      },
+      {
+        "id": "moebel",
+        "label": "Möbel & Licht",
+        "num": "04",
+        "image": "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?w=1400&q=85&auto=format&fit=crop",
+        "image_alt": "Möbel und Licht",
+        "title": "Möbel & Licht",
+        "text": "Wenn das Standardprogramm nicht reicht: Sondermöbel, Leuchten, Türgriffe, Geschirr. Wir entwickeln Editionen mit lokalen Manufakturen und Schreinereien aus Brandenburg und Berlin.",
+        "items": [
+          "Maßgefertigte Möbel & Einbauten",
+          "Leuchten- und Lichtkonzepte",
+          "Hardware-Selektion & Sonderanfertigungen",
+          "Kleinserien für Gastronomie & Hotel"
+        ],
+        "cta": { "label": "Mehr erfahren", "href": "/leistungen" }
+      },
+      {
+        "id": "denkmal",
+        "label": "Denkmalpflege",
+        "num": "05",
+        "image": "https://images.unsplash.com/photo-1505693314120-0d443867891c?w=1400&q=85&auto=format&fit=crop",
+        "image_alt": "Denkmalpflege",
+        "title": "Denkmal & Bestand",
+        "text": "Potsdam ist eine Stadt der Schichten. Wir arbeiten gerne im Bestand – mit Respekt vor dem Vorhandenen und einer klaren Idee davon, was bleibt und was geht.",
+        "items": [
+          "Voruntersuchung & Bestandsaufnahme",
+          "Abstimmung mit der Denkmalbehörde",
+          "Restaurierungskonzepte",
+          "Behutsame Modernisierung"
+        ],
+        "cta": { "label": "Mehr erfahren", "href": "/leistungen" }
+      }
+    ]
+  },
+  "projects": {
+    "eyebrow": "Auswahl",
+    "heading_html": "Aktuelle <em>Projekte</em>.",
+    "cta": { "label": "Alle Projekte", "href": "/projekte" },
+    "items": [
+      {
+        "size": "large",
+        "image": "https://images.unsplash.com/photo-1554995207-c18c203602cb?w=1600&q=85&auto=format&fit=crop",
+        "image_alt": "Villa am Heiligen See",
+        "category": "Privates Wohnen",
+        "title": "Villa am Heiligen See",
+        "year": "2024"
+      },
+      {
+        "size": "small",
+        "image": "https://images.unsplash.com/photo-1559329007-40df8a9345d8?w=1200&q=85&auto=format&fit=crop",
+        "image_alt": "Restaurant Mira",
+        "category": "Gastronomie",
+        "title": "Restaurant Mira",
+        "year": "2024"
+      },
+      {
+        "size": "medium",
+        "image": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1400&q=85&auto=format&fit=crop",
+        "image_alt": "Sanssouci Suites Hotel",
+        "category": "Hotellerie",
+        "title": "Sanssouci Suites",
+        "year": "2023"
+      },
+      {
+        "size": "medium",
+        "image": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=1400&q=85&auto=format&fit=crop",
+        "image_alt": "Loft Charlottenburg",
+        "category": "Privates Wohnen",
+        "title": "Loft Charlottenburg",
+        "year": "2023"
+      }
+    ]
+  },
+  "process": {
+    "eyebrow": "Arbeitsweise",
+    "heading_html": "In vier Phasen <em>vom Aufmaß zur Schlüsselübergabe</em>.",
+    "steps": [
+      { "num": "PHASE 01", "title": "Hören & Verstehen", "text": "Eine ausführliche Bestandsaufnahme – des Raums und der Menschen, die ihn bewohnen werden. Hier entscheidet sich, wohin die Reise geht." },
+      { "num": "PHASE 02", "title": "Konzept & Skizze", "text": "Aus den Gesprächen wird ein Raumkonzept: Stimmungen, Materialien, Grundrisse. Drei Entwürfe, eine klare Empfehlung." },
+      { "num": "PHASE 03", "title": "Werkplanung", "text": "Detail- und Möbelpläne, Ausschreibungen, Mustertafeln. Hier wird aus der Idee ein verbindliches Bauwerk." },
+      { "num": "PHASE 04", "title": "Realisierung", "text": "Bauleitung, Abnahme, Styling. Wir bleiben bis zur Vase auf dem Esstisch und der Pflanze im Bad." }
+    ]
+  },
+  "testimonials": [
+    {
+      "quote": "Raumwerk hat unser denkmalgeschütztes Stadthaus in einen Ort verwandelt, an dem Vergangenheit und Gegenwart selbstverständlich miteinander wohnen. Eine Sensibilität, die selten geworden ist.",
+      "name": "Dr. Cornelia Wiegand",
+      "role": "Bauherrin, Villa am Heiligen See"
+    },
+    {
+      "quote": "Die Zusammenarbeit war von der ersten Skizze bis zur Schlüsselübergabe geprägt von Klarheit, Handwerkskunst und einem feinen Gespür für Atmosphäre. Wir empfehlen das Studio uneingeschränkt weiter.",
+      "name": "Felix & Antonia Reinholdt",
+      "role": "Restaurant Mira, Potsdam"
+    },
+    {
+      "quote": "Lena und ihr Team haben es geschafft, die Identität unseres Hotels in jedem Detail spürbar zu machen – von der Tapete bis zum Türgriff. Unsere Gäste sprechen jeden Tag darüber.",
+      "name": "Henrik Albrecht",
+      "role": "Direktor, Sanssouci Suites Hotel"
+    }
+  ],
+  "journal": {
+    "eyebrow": "Journal",
+    "heading_html": "Aus dem <em>Studio</em>.",
+    "cta": { "label": "Alle Beiträge", "href": "#" },
+    "items": [
+      {
+        "image": "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?w=1200&q=85&auto=format&fit=crop",
+        "image_alt": "Material",
+        "date": "12. März 2026 · Material",
+        "title": "Warum Lehmputz wieder eine Antwort ist.",
+        "text": "Über das Comeback eines uralten Materials – und seine Rolle in unseren aktuellen Wohnprojekten."
+      },
+      {
+        "image": "https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=1200&q=85&auto=format&fit=crop",
+        "image_alt": "Licht",
+        "date": "28. Januar 2026 · Licht",
+        "title": "Drei Lichtszenen, die jedes Wohnzimmer verändern.",
+        "text": "Was wir aus zehn Jahren Lichtplanung gelernt haben – und was wir sofort wieder anders machen würden."
+      },
+      {
+        "image": "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=1200&q=85&auto=format&fit=crop",
+        "image_alt": "Werkstatt",
+        "date": "04. Dezember 2025 · Werkstatt",
+        "title": "Zu Besuch bei der Tischlerei Kuhnke in Werder.",
+        "text": "Seit acht Jahren arbeiten wir mit Familie Kuhnke. Ein Werkstattbesuch zwischen Eichenholz und Espresso."
+      }
+    ]
+  },
+  "cta": {
+    "eyebrow": "Erstgespräch",
+    "heading_html": "Erzählen Sie uns von Ihrem <em>Vorhaben</em>.",
+    "text": "Ob konkretes Projekt oder erste Idee – ein Erstgespräch in unserem Studio in der Berliner Vorstadt ist immer kostenlos und unverbindlich.",
+    "button": { "label": "Termin anfragen", "href": "/kontakt" }
+  }
+}

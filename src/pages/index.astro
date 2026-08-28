@@ -1,25 +1,21 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import page from '../data/home.json';
+
+const { hero, marquee, intro, services, projects, process, testimonials, journal, cta } = page;
+const t0 = testimonials[0];
 ---
-<BaseLayout
-  title="Raumwerk – Innenarchitektur Studio Potsdam"
-  description="Raumwerk ist ein Innenarchitektur-Studio aus Potsdam. Wir entwerfen Räume mit Charakter – für private Bauherren, Gastronomie und Hotellerie."
-  active="studio"
->
+<BaseLayout title={page.title} description={page.description} active="studio">
   <!-- Hero -->
   <header class="hero">
-    <div class="hero-image" style="background-image: url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=2400&q=85&auto=format&fit=crop');"></div>
+    <div class="hero-image" style={`background-image: url('${hero.image}');`}></div>
     <div class="container hero-content">
-      <span class="eyebrow">Innenarchitektur Studio · Potsdam</span>
-      <h1>Räume,<br>die <em>bleiben</em>.</h1>
-      <p class="hero-sub">Wir entwerfen Innenräume mit Charakter und Beständigkeit – aus Brandenburg, für Menschen, die das Echte suchen.</p>
-      <a href="/projekte" class="btn btn-light btn-arrow">Projekte ansehen</a>
+      <span class="eyebrow">{hero.eyebrow}</span>
+      <h1 set:html={hero.heading_html}></h1>
+      <p class="hero-sub">{hero.sub}</p>
+      <a href={hero.cta.href} class="btn btn-light btn-arrow">{hero.cta.label}</a>
     </div>
-    <div class="hero-meta">
-      Est. 2014<br>
-      52° 24′ N · 13° 04′ E<br>
-      Potsdam · Berlin
-    </div>
+    <div class="hero-meta" set:html={hero.meta_html}></div>
     <div class="hero-scroll">
       Scroll
       <span class="line"></span>
@@ -29,8 +25,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <!-- Marquee -->
   <div class="marquee">
     <div class="marquee-track">
-      <span>Wohnräume <span class="star">✦</span> Hotellerie <span class="star">✦</span> Gastronomie <span class="star">✦</span> Möbeldesign <span class="star">✦</span> Lichtkonzepte <span class="star">✦</span> Materialwelten <span class="star">✦</span></span>
-      <span>Wohnräume <span class="star">✦</span> Hotellerie <span class="star">✦</span> Gastronomie <span class="star">✦</span> Möbeldesign <span class="star">✦</span> Lichtkonzepte <span class="star">✦</span> Materialwelten <span class="star">✦</span></span>
+      <span>{marquee.map((m) => (<>{m} <span class="star">✦</span> </>))}</span>
+      <span>{marquee.map((m) => (<>{m} <span class="star">✦</span> </>))}</span>
     </div>
   </div>
 
@@ -39,27 +35,20 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <div class="container">
       <div class="intro-grid">
         <div class="intro-text fade-in">
-          <span class="eyebrow">Studio</span>
-          <h2>Ein Handwerk aus <em>Geduld</em>, Material und Licht.</h2>
-          <p>Raumwerk wurde 2014 in einer alten Zigarrenfabrik in der Potsdamer Berliner Vorstadt gegründet. Was als Atelier zweier Innenarchitekt:innen begann, ist heute ein interdisziplinäres Studio mit acht festen Mitarbeiter:innen.</p>
-          <p>Wir glauben an Räume, die nicht nur fotografiert werden können, sondern bewohnt. An Materialien, die altern dürfen. An eine Gestaltung, die sich nicht in den Vordergrund drängt – sondern Platz lässt für das, was hineinwächst.</p>
+          <span class="eyebrow">{intro.eyebrow}</span>
+          <h2 set:html={intro.heading_html}></h2>
+          {intro.paragraphs.map((p) => (<p>{p}</p>))}
           <div class="intro-stats">
-            <div class="stat">
-              <span class="num">11</span>
-              <span class="label">Jahre Studio</span>
-            </div>
-            <div class="stat">
-              <span class="num">87</span>
-              <span class="label">Realisierte Projekte</span>
-            </div>
-            <div class="stat">
-              <span class="num">8</span>
-              <span class="label">Köpfe im Team</span>
-            </div>
+            {intro.stats.map((s) => (
+              <div class="stat">
+                <span class="num">{s.num}</span>
+                <span class="label">{s.label}</span>
+              </div>
+            ))}
           </div>
         </div>
         <div class="intro-image fade-in fade-in-delay-1">
-          <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=1200&q=85&auto=format&fit=crop" alt="Wohnzimmer mit warmem Licht und Naturmaterialien">
+          <img src={intro.image} alt={intro.image_alt}>
         </div>
       </div>
     </div>
@@ -70,95 +59,32 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <div class="container">
       <div class="services-header fade-in">
         <div>
-          <span class="eyebrow">Leistungen</span>
-          <h2>Was wir tun, <em>wie wir es tun</em>.</h2>
+          <span class="eyebrow">{services.eyebrow}</span>
+          <h2 set:html={services.heading_html}></h2>
         </div>
-        <p class="lead">Vom ersten Aufmaß bis zur letzten Türklinke – wir begleiten Bauherrinnen und Betreiber durch jede Phase. Konzeptstark, handwerklich präzise, atmosphärisch klar.</p>
+        <p class="lead">{services.lead}</p>
       </div>
 
       <div class="tabs fade-in fade-in-delay-1">
         <div class="tab-list" role="tablist">
-          <button class="tab-btn active" data-tab="wohnen">Wohnräume <span class="num">01</span></button>
-          <button class="tab-btn" data-tab="gastro">Gastronomie <span class="num">02</span></button>
-          <button class="tab-btn" data-tab="hotel">Hotellerie <span class="num">03</span></button>
-          <button class="tab-btn" data-tab="moebel">Möbel & Licht <span class="num">04</span></button>
-          <button class="tab-btn" data-tab="denkmal">Denkmalpflege <span class="num">05</span></button>
+          {services.tabs.map((tab, i) => (
+            <button class:list={['tab-btn', { active: i === 0 }]} data-tab={tab.id}>{tab.label} <span class="num">{tab.num}</span></button>
+          ))}
         </div>
 
-        <div class="tab-content active" data-tab="wohnen">
-          <img src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=1400&q=85&auto=format&fit=crop" alt="Privates Wohnen">
-          <div class="tab-info">
-            <h3>Privates Wohnen</h3>
-            <p>Vom Stadtapartment in Babelsberg bis zur Villa am Heiligen See: wir entwerfen Wohnungen, die nicht zum Statement werden – sondern zum Alltag passen.</p>
-            <ul>
-              <li>Konzeption & Raumplanung</li>
-              <li>Material- und Farbentwicklung</li>
-              <li>Maßmöbel und feste Einbauten</li>
-              <li>Bauleitung und Gewerkekoordination</li>
-            </ul>
-            <a href="/leistungen" class="btn btn-arrow">Mehr erfahren</a>
+        {services.tabs.map((tab, i) => (
+          <div class:list={['tab-content', { active: i === 0 }]} data-tab={tab.id}>
+            <img src={tab.image} alt={tab.image_alt}>
+            <div class="tab-info">
+              <h3>{tab.title}</h3>
+              <p>{tab.text}</p>
+              <ul>
+                {tab.items.map((item) => (<li>{item}</li>))}
+              </ul>
+              <a href={tab.cta.href} class="btn btn-arrow">{tab.cta.label}</a>
+            </div>
           </div>
-        </div>
-
-        <div class="tab-content" data-tab="gastro">
-          <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=1400&q=85&auto=format&fit=crop" alt="Gastronomie Innenraum">
-          <div class="tab-info">
-            <h3>Gastronomie</h3>
-            <p>Räume, in denen man bleiben möchte. Wir entwickeln Gastronomiekonzepte, die zur Marke passen, im Betrieb funktionieren und auch nach fünf Jahren noch tragen.</p>
-            <ul>
-              <li>Markenraum & Storytelling</li>
-              <li>Akustik-, Licht- und Wegeplanung</li>
-              <li>Möblierung und Sondertische</li>
-              <li>Genehmigungs- und Werkplanung</li>
-            </ul>
-            <a href="/leistungen" class="btn btn-arrow">Mehr erfahren</a>
-          </div>
-        </div>
-
-        <div class="tab-content" data-tab="hotel">
-          <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=1400&q=85&auto=format&fit=crop" alt="Boutique Hotel">
-          <div class="tab-info">
-            <h3>Hotellerie</h3>
-            <p>Boutique-Hotels und Suiten, die sich anfühlen wie das Zuhause eines reisefreudigen Menschen mit Geschmack. Vom Lobbykonzept bis zur Bademantelfarbe.</p>
-            <ul>
-              <li>FF&E – Furniture, Fixtures, Equipment</li>
-              <li>Suite-Typologien & Mock-up Rooms</li>
-              <li>Restaurant-, Spa- und Lobbygestaltung</li>
-              <li>Branding-Schnittstelle und Signage</li>
-            </ul>
-            <a href="/leistungen" class="btn btn-arrow">Mehr erfahren</a>
-          </div>
-        </div>
-
-        <div class="tab-content" data-tab="moebel">
-          <img src="https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?w=1400&q=85&auto=format&fit=crop" alt="Möbel und Licht">
-          <div class="tab-info">
-            <h3>Möbel & Licht</h3>
-            <p>Wenn das Standardprogramm nicht reicht: Sondermöbel, Leuchten, Türgriffe, Geschirr. Wir entwickeln Editionen mit lokalen Manufakturen und Schreinereien aus Brandenburg und Berlin.</p>
-            <ul>
-              <li>Maßgefertigte Möbel & Einbauten</li>
-              <li>Leuchten- und Lichtkonzepte</li>
-              <li>Hardware-Selektion & Sonderanfertigungen</li>
-              <li>Kleinserien für Gastronomie & Hotel</li>
-            </ul>
-            <a href="/leistungen" class="btn btn-arrow">Mehr erfahren</a>
-          </div>
-        </div>
-
-        <div class="tab-content" data-tab="denkmal">
-          <img src="https://images.unsplash.com/photo-1505693314120-0d443867891c?w=1400&q=85&auto=format&fit=crop" alt="Denkmalpflege">
-          <div class="tab-info">
-            <h3>Denkmal & Bestand</h3>
-            <p>Potsdam ist eine Stadt der Schichten. Wir arbeiten gerne im Bestand – mit Respekt vor dem Vorhandenen und einer klaren Idee davon, was bleibt und was geht.</p>
-            <ul>
-              <li>Voruntersuchung & Bestandsaufnahme</li>
-              <li>Abstimmung mit der Denkmalbehörde</li>
-              <li>Restaurierungskonzepte</li>
-              <li>Behutsame Modernisierung</li>
-            </ul>
-            <a href="/leistungen" class="btn btn-arrow">Mehr erfahren</a>
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   </section>
@@ -168,53 +94,25 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <div class="container">
       <div class="services-header fade-in">
         <div>
-          <span class="eyebrow">Auswahl</span>
-          <h2>Aktuelle <em>Projekte</em>.</h2>
+          <span class="eyebrow">{projects.eyebrow}</span>
+          <h2 set:html={projects.heading_html}></h2>
         </div>
-        <a href="/projekte" class="btn btn-arrow">Alle Projekte</a>
+        <a href={projects.cta.href} class="btn btn-arrow">{projects.cta.label}</a>
       </div>
 
       <div class="projects-grid fade-in fade-in-delay-1">
-        <div class="project-card large">
-          <div class="img-wrap"><img src="https://images.unsplash.com/photo-1554995207-c18c203602cb?w=1600&q=85&auto=format&fit=crop" alt="Villa am Heiligen See"></div>
-          <div class="meta">
-            <div>
-              <div class="cat">Privates Wohnen</div>
-              <h4>Villa am Heiligen See</h4>
+        {projects.items.map((p) => (
+          <div class:list={['project-card', p.size]}>
+            <div class="img-wrap"><img src={p.image} alt={p.image_alt}></div>
+            <div class="meta">
+              <div>
+                <div class="cat">{p.category}</div>
+                <h4>{p.title}</h4>
+              </div>
+              <span class="year">{p.year}</span>
             </div>
-            <span class="year">2024</span>
           </div>
-        </div>
-        <div class="project-card small">
-          <div class="img-wrap"><img src="https://images.unsplash.com/photo-1559329007-40df8a9345d8?w=1200&q=85&auto=format&fit=crop" alt="Restaurant Mira"></div>
-          <div class="meta">
-            <div>
-              <div class="cat">Gastronomie</div>
-              <h4>Restaurant Mira</h4>
-            </div>
-            <span class="year">2024</span>
-          </div>
-        </div>
-        <div class="project-card medium">
-          <div class="img-wrap"><img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1400&q=85&auto=format&fit=crop" alt="Sanssouci Suites Hotel"></div>
-          <div class="meta">
-            <div>
-              <div class="cat">Hotellerie</div>
-              <h4>Sanssouci Suites</h4>
-            </div>
-            <span class="year">2023</span>
-          </div>
-        </div>
-        <div class="project-card medium">
-          <div class="img-wrap"><img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=1400&q=85&auto=format&fit=crop" alt="Loft Charlottenburg"></div>
-          <div class="meta">
-            <div>
-              <div class="cat">Privates Wohnen</div>
-              <h4>Loft Charlottenburg</h4>
-            </div>
-            <span class="year">2023</span>
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   </section>
@@ -224,31 +122,18 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <div class="container">
       <div class="services-header fade-in">
         <div>
-          <span class="eyebrow">Arbeitsweise</span>
-          <h2>In vier Phasen <em>vom Aufmaß zur Schlüsselübergabe</em>.</h2>
+          <span class="eyebrow">{process.eyebrow}</span>
+          <h2 set:html={process.heading_html}></h2>
         </div>
       </div>
       <div class="process-steps">
-        <div class="step fade-in">
-          <div class="num">PHASE 01</div>
-          <h4>Hören & Verstehen</h4>
-          <p>Eine ausführliche Bestandsaufnahme – des Raums und der Menschen, die ihn bewohnen werden. Hier entscheidet sich, wohin die Reise geht.</p>
-        </div>
-        <div class="step fade-in fade-in-delay-1">
-          <div class="num">PHASE 02</div>
-          <h4>Konzept & Skizze</h4>
-          <p>Aus den Gesprächen wird ein Raumkonzept: Stimmungen, Materialien, Grundrisse. Drei Entwürfe, eine klare Empfehlung.</p>
-        </div>
-        <div class="step fade-in fade-in-delay-2">
-          <div class="num">PHASE 03</div>
-          <h4>Werkplanung</h4>
-          <p>Detail- und Möbelpläne, Ausschreibungen, Mustertafeln. Hier wird aus der Idee ein verbindliches Bauwerk.</p>
-        </div>
-        <div class="step fade-in fade-in-delay-3">
-          <div class="num">PHASE 04</div>
-          <h4>Realisierung</h4>
-          <p>Bauleitung, Abnahme, Styling. Wir bleiben bis zur Vase auf dem Esstisch und der Pflanze im Bad.</p>
-        </div>
+        {process.steps.map((step, i) => (
+          <div class:list={['step', 'fade-in', i > 0 && `fade-in-delay-${i}`]}>
+            <div class="num">{step.num}</div>
+            <h4>{step.title}</h4>
+            <p>{step.text}</p>
+          </div>
+        ))}
       </div>
     </div>
   </section>
@@ -258,45 +143,36 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <div class="container-narrow">
       <div class="testimonial-content fade-in">
         <div class="quote-mark">"</div>
-        <blockquote>„Raumwerk hat unser denkmalgeschütztes Stadthaus in einen Ort verwandelt, an dem Vergangenheit und Gegenwart selbstverständlich miteinander wohnen. Eine Sensibilität, die selten geworden ist."</blockquote>
+        <blockquote>{`„${t0.quote}"`}</blockquote>
         <cite>
-          <strong>Dr. Cornelia Wiegand</strong>
-          Bauherrin, Villa am Heiligen See
+          <strong>{t0.name}</strong>
+          {t0.role}
         </cite>
         <div class="testimonial-nav"></div>
       </div>
     </div>
   </section>
+  <script type="application/json" id="testimonials-data" set:html={JSON.stringify(testimonials)}></script>
 
   <!-- Journal -->
   <section class="journal">
     <div class="container">
       <div class="services-header fade-in">
         <div>
-          <span class="eyebrow">Journal</span>
-          <h2>Aus dem <em>Studio</em>.</h2>
+          <span class="eyebrow">{journal.eyebrow}</span>
+          <h2 set:html={journal.heading_html}></h2>
         </div>
-        <a href="#" class="btn btn-arrow">Alle Beiträge</a>
+        <a href={journal.cta.href} class="btn btn-arrow">{journal.cta.label}</a>
       </div>
       <div class="journal-grid">
-        <article class="journal-card fade-in">
-          <div class="img-wrap"><img src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?w=1200&q=85&auto=format&fit=crop" alt="Material"></div>
-          <div class="date">12. März 2026 · Material</div>
-          <h4>Warum Lehmputz wieder eine Antwort ist.</h4>
-          <p>Über das Comeback eines uralten Materials – und seine Rolle in unseren aktuellen Wohnprojekten.</p>
-        </article>
-        <article class="journal-card fade-in fade-in-delay-1">
-          <div class="img-wrap"><img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=1200&q=85&auto=format&fit=crop" alt="Licht"></div>
-          <div class="date">28. Januar 2026 · Licht</div>
-          <h4>Drei Lichtszenen, die jedes Wohnzimmer verändern.</h4>
-          <p>Was wir aus zehn Jahren Lichtplanung gelernt haben – und was wir sofort wieder anders machen würden.</p>
-        </article>
-        <article class="journal-card fade-in fade-in-delay-2">
-          <div class="img-wrap"><img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?w=1200&q=85&auto=format&fit=crop" alt="Werkstatt"></div>
-          <div class="date">04. Dezember 2025 · Werkstatt</div>
-          <h4>Zu Besuch bei der Tischlerei Kuhnke in Werder.</h4>
-          <p>Seit acht Jahren arbeiten wir mit Familie Kuhnke. Ein Werkstattbesuch zwischen Eichenholz und Espresso.</p>
-        </article>
+        {journal.items.map((item, i) => (
+          <article class:list={['journal-card', 'fade-in', i > 0 && `fade-in-delay-${i}`]}>
+            <div class="img-wrap"><img src={item.image} alt={item.image_alt}></div>
+            <div class="date">{item.date}</div>
+            <h4>{item.title}</h4>
+            <p>{item.text}</p>
+          </article>
+        ))}
       </div>
     </div>
   </section>
@@ -304,10 +180,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <!-- CTA -->
   <section class="cta-section">
     <div class="container-narrow fade-in">
-      <span class="eyebrow">Erstgespräch</span>
-      <h2>Erzählen Sie uns von Ihrem <em>Vorhaben</em>.</h2>
-      <p>Ob konkretes Projekt oder erste Idee – ein Erstgespräch in unserem Studio in der Berliner Vorstadt ist immer kostenlos und unverbindlich.</p>
-      <a href="/kontakt" class="btn btn-light btn-arrow">Termin anfragen</a>
+      <span class="eyebrow">{cta.eyebrow}</span>
+      <h2 set:html={cta.heading_html}></h2>
+      <p>{cta.text}</p>
+      <a href={cta.button.href} class="btn btn-light btn-arrow">{cta.button.label}</a>
     </div>
   </section>
 </BaseLayout>

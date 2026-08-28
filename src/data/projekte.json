@@ -1,0 +1,123 @@
+{
+  "title": "Projekte – Raumwerk Innenarchitektur Potsdam",
+  "description": "Realisierte Projekte als Fallstudien: Wohnräume, Hotellerie, Gastronomie und Möbeldesign aus dem Raumwerk Studio Potsdam.",
+  "hero": {
+    "breadcrumb": "Projekte",
+    "heading_html": "Sechs Fallstudien<br>aus elf <em>Studiojahren</em>.",
+    "text": "Eine kleine Auswahl realisierter Arbeiten – mit Material, Maßen und Geschichten dahinter. 87 Projekte sind es insgesamt; hier die, die wir am liebsten zeigen."
+  },
+  "cases": [
+    {
+      "num": "No. 01",
+      "image": "https://images.unsplash.com/photo-1554995207-c18c203602cb?w=1600&q=85&auto=format&fit=crop",
+      "image_alt": "Villa am Heiligen See",
+      "category": "Privates Wohnen",
+      "location": "Potsdam · 2024",
+      "title": "Villa am Heiligen See",
+      "text": "Eine Villa aus den frühen 1920er Jahren, die wir gemeinsam mit den Bauherrinnen aus einem unglücklichen 90er-Jahre-Umbau zurückgeführt haben in eine zeitgemäße Großzügigkeit. Drei Etagen mit Bibliothek, einem Bootshaus am Steg und einer Wohnküche, die sich über die ganze Hofseite zur Wasserlinie hin verglast. Wir verantworteten den vollständigen Innenausbau inklusive Möblierung, Lichtkonzept und Hängung der bestehenden Kunstsammlung.",
+      "facts": [
+        { "label": "Fläche", "val": "340 m² + Bootshaus" },
+        { "label": "Leistungsphasen", "val": "LP 1 – 9 nach HOAI" },
+        { "label": "Bauzeit", "val": "14 Monate" },
+        { "label": "Fertigstellung", "val": "Frühjahr 2024" }
+      ],
+      "tags": ["Geseifte Eiche", "Travertin", "Kalkputz", "Patiniertes Messing", "Bouclé-Wolle"]
+    },
+    {
+      "num": "No. 02",
+      "image": "https://images.unsplash.com/photo-1559329007-40df8a9345d8?w=1400&q=85&auto=format&fit=crop",
+      "image_alt": "Restaurant Mira",
+      "category": "Gastronomie",
+      "location": "Potsdam · 2024",
+      "title": "Restaurant Mira",
+      "text": "Ein Fine-Dining-Restaurant in einer ehemaligen Tabakhandlung am Bassinplatz. Mit den Inhabern Felix und Antonia Reinholdt entwickelten wir ein Raumkonzept, das von der Marke bis zum Tafelsilber durchgezogen ist: eine Akustikdecke aus gefräster Eiche, Sondertische aus geöltem Mooreichenholz und ein Lichtkonzept mit drei Szenen pro Gang. Das Projekt wurde 2025 mit dem German Design Award (Excellent Architecture · Interior) ausgezeichnet.",
+      "facts": [
+        { "label": "Fläche", "val": "220 m² · 2 Ebenen" },
+        { "label": "Sitzplätze", "val": "64 + Bar" },
+        { "label": "Bauzeit", "val": "11 Monate" },
+        { "label": "Auszeichnung", "val": "German Design Award 2025" }
+      ],
+      "tags": ["Mooreiche", "Solnhofener Plattenkalk", "Messing", "Akustikholz"]
+    },
+    {
+      "num": "No. 03",
+      "image": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1400&q=85&auto=format&fit=crop",
+      "image_alt": "Sanssouci Suites",
+      "category": "Hotellerie",
+      "location": "Potsdam · 2023",
+      "title": "Sanssouci Suites",
+      "text": "Vierzehn Suiten, drei Typologien, ein gemeinsamer Geist. Für ein junges Hoteliers­paar entwarfen wir ein Boutique-Hotel fünf Gehminuten vom Park Sanssouci. Räume, die sich anfühlen wie das Refugium eines reisefreudigen Sammlers: Bodenfliesen aus Werder, Kopfteile aus gewebter Hanfwolle, Stehleuchten in Eigenfertigung. Die Lobby teilt sich mit einem Bistro, das auch Gäste von der Straße empfängt.",
+      "facts": [
+        { "label": "Suiten", "val": "14 · 3 Typologien" },
+        { "label": "Gesamtfläche", "val": "1.250 m²" },
+        { "label": "Leistung", "val": "FF&E komplett" },
+        { "label": "Bauzeit", "val": "22 Monate" }
+      ],
+      "tags": ["Lehmputz", "Hanfwolle", "Gewachste Esche", "Werderaner Keramik"]
+    },
+    {
+      "num": "No. 04",
+      "image": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=1600&q=85&auto=format&fit=crop",
+      "image_alt": "Loft Charlottenburg",
+      "category": "Privates Wohnen",
+      "location": "Berlin · 2023",
+      "title": "Loft Charlottenburg",
+      "text": "Ein ehemaliger Pianofabrik-Saal in der Schillerstraße mit fünf Meter hohen Decken und gusseisernen Stützen. Wir teilten ihn vorsichtig: mit zwei Glaswänden, einem freistehenden Hauswirtschafts-Volumen aus geseifter Eiche und einer Schlafgalerie über der Bibliothek. Ein Loft, das nicht alles auf einmal zeigt – und das mit der Tageszeit den Blickwinkel ändert.",
+      "facts": [
+        { "label": "Fläche", "val": "180 m² · 5,2 m Höhe" },
+        { "label": "Leistungsphasen", "val": "LP 2 – 8" },
+        { "label": "Bauzeit", "val": "9 Monate" },
+        { "label": "Auszeichnung", "val": "Iconic Awards 2023" }
+      ],
+      "tags": ["Sichtbeton", "Geseifte Eiche", "Walzstahl", "Glasfassade"]
+    },
+    {
+      "num": "No. 05",
+      "image": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=1400&q=85&auto=format&fit=crop",
+      "image_alt": "Stadthaus Holländisches Viertel",
+      "category": "Privates Wohnen · Denkmal",
+      "location": "Potsdam · 2022",
+      "title": "Stadthaus Holländisches Viertel",
+      "text": "Ein viergeschossiges Reihenhaus aus dem 18. Jahrhundert, Innenausbau in enger Abstimmung mit der Unteren Denkmalschutzbehörde Potsdam. Wir bewahrten die historischen Dielenböden und das Treppenhaus, ergänzten ein zeitgemäßes Bad in der ehemaligen Speisekammer und öffneten Erdgeschoss und Souterrain zu einer durchgehenden Wohnküche. Sanft, aber selbstbewusst.",
+      "facts": [
+        { "label": "Fläche", "val": "165 m² · 4 Etagen" },
+        { "label": "Status", "val": "Einzeldenkmal" },
+        { "label": "Bauzeit", "val": "12 Monate" },
+        { "label": "Auszeichnung", "val": "Brandenb. Baukulturpreis 2022 (Anerk.)" }
+      ],
+      "tags": ["Dielenboden saniert", "Lehmputz", "Polnischer Sandstein", "Historische Beschläge"]
+    },
+    {
+      "num": "No. 06",
+      "image": "https://images.unsplash.com/photo-1560185007-5f0bb1866cab?w=1600&q=85&auto=format&fit=crop",
+      "image_alt": "Penthouse Tiergarten",
+      "category": "Privates Wohnen",
+      "location": "Berlin · 2021",
+      "title": "Penthouse Tiergarten",
+      "text": "Ein Penthouse mit umlaufender Dachterrasse über dem Berliner Tiergarten. Für ein international tätiges Sammlerpaar entwickelten wir den kompletten Innenausbau: eine Materialwelt aus geseifter Eiche, römischem Travertin und gewebten Wandverkleidungen aus französischem Bouclé. Die Bibliothek wurde vom Studio entworfen und in Werder gefertigt – sie ist 14 Meter lang und nimmt 2.300 Bände auf.",
+      "facts": [
+        { "label": "Fläche", "val": "240 m² + 95 m² Dachterrasse" },
+        { "label": "Leistungsphasen", "val": "LP 1 – 9" },
+        { "label": "Bauzeit", "val": "13 Monate" },
+        { "label": "Sondermöbel", "val": "14 m Bibliothek (Eigenentwurf)" }
+      ],
+      "tags": ["Geseifte Eiche", "Römischer Travertin", "Bouclé-Wandbespannung", "Pierre Bleue"]
+    }
+  ],
+  "numbers": {
+    "eyebrow": "In Zahlen",
+    "heading_html": "Elf Jahre <em>Studio</em>.",
+    "stats": [
+      { "num": "87", "label": "Realisierte Projekte", "delay": 0 },
+      { "num": "14", "label": "Hotelzimmer-Typologien", "delay": 1 },
+      { "num": "340+", "label": "Maßmöbel-Anfertigungen", "delay": 2 },
+      { "num": "23", "label": "Manufakturen-Partner:innen", "delay": 3 }
+    ]
+  },
+  "cta": {
+    "eyebrow": "Eigenes Vorhaben?",
+    "heading_html": "Wir freuen uns auf <em>Ihre Idee</em>.",
+    "text": "Senden Sie uns eine kurze Beschreibung Ihres Projekts – wir melden uns innerhalb von drei Werktagen.",
+    "button": { "label": "Anfrage senden", "href": "/kontakt" }
+  }
+}

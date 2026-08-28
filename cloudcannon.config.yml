@@ -1,0 +1,73 @@
+# CloudCannon-Konfiguration für die Raumwerk-Astro-Website.
+# Dokumentation: https://cloudcannon.com/documentation/
+#
+# Die Inhalte liegen bewusst NICHT mehr fest in den .astro-Dateien, sondern in
+# editierbaren Datenquellen:
+#   - src/data/site.json        globale Inhalte (Navigation, Footer, Kontakt)
+#   - src/data/<seite>.json      Inhalt je Seite (Formular-Bearbeitung)
+#   - src/legal/<seite>.html     Rechtstexte (Rich-Text-Bearbeitung)
+#
+# Die .astro-Dateien sind reine Templates und tauchen daher nicht als
+# bearbeitbarer Inhalt auf – deshalb verschwindet die WYSIWYG-Fehlermeldung.
+
+# Wohin CloudCannon hochgeladene Dateien (z. B. Bilder) legt.
+paths:
+  uploads: public/uploads
+  static: public
+
+# Globale, seitenübergreifende Inhalte – erscheinen unter „Data".
+data_config:
+  site:
+    path: src/data/site.json
+
+# Bearbeitbare Sammlungen.
+collections_config:
+  pages:
+    path: src/data
+    name: Seiten
+    icon: description
+    glob:
+      - '*.json'
+      - '!site.json'
+    disable_add: true
+    disable_add_folder: true
+    disable_url: true
+    _enabled_editors:
+      - data
+  legal:
+    path: src/legal
+    name: Rechtstexte
+    icon: gavel
+    glob:
+      - '*.html'
+    disable_add: true
+    disable_add_folder: true
+    disable_url: true
+    _enabled_editors:
+      - content
+
+# Reihenfolge/Gruppierung in der Seitenleiste.
+collection_groups:
+  - heading: Inhalte
+    collections:
+      - pages
+      - legal
+
+# Mehrzeilige Felder als Textbereich statt einzeiligem Input darstellen.
+_inputs:
+  description:
+    type: textarea
+    comment: Meta-Description für Suchmaschinen.
+  text:
+    type: textarea
+  sub:
+    type: textarea
+  lead:
+    type: textarea
+  answer:
+    type: textarea
+  note:
+    type: textarea
+  heading_html:
+    type: text
+    comment: Überschrift – <em>…</em> hebt kursiv hervor, <br> erzwingt Zeilenumbruch.

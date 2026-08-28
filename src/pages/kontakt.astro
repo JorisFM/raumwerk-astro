@@ -1,16 +1,15 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import page from '../data/kontakt.json';
+
+const { hero, direct, form, map } = page;
 ---
-<BaseLayout
-  title="Kontakt – Raumwerk Innenarchitektur Potsdam"
-  description="Schreiben oder besuchen Sie uns. Brandenburger Straße 42, 14467 Potsdam. Telefon +49 331 270 89 45."
-  active="kontakt"
->
+<BaseLayout title={page.title} description={page.description} active="kontakt">
   <section class="page-hero">
     <div class="container">
-      <div class="breadcrumb"><a href="/">Studio</a> · Kontakt</div>
-      <h1>Schreiben oder<br><em>besuchen</em> Sie uns.</h1>
-      <p>Wir freuen uns auf Ihr Projekt. Schreiben Sie uns über das Formular, rufen Sie an – oder kommen Sie auf einen Espresso vorbei.</p>
+      <div class="breadcrumb"><a href="/">Studio</a> · {hero.breadcrumb}</div>
+      <h1 set:html={hero.heading_html}></h1>
+      <p>{hero.text}</p>
     </div>
   </section>
 
@@ -19,34 +18,26 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <div class="container">
       <div class="contact-grid">
         <div class="fade-in">
-          <span class="eyebrow">Direkt</span>
-          <h2>So erreichen Sie <em>uns</em>.</h2>
+          <span class="eyebrow">{direct.eyebrow}</span>
+          <h2 set:html={direct.heading_html}></h2>
           <div style="margin-top: 3rem;">
-            <div class="contact-info-block">
-              <div class="label">Studio</div>
-              <span class="value-text">Brandenburger Straße 42</span>
-              <span style="color: var(--ink-soft);">14467 Potsdam · Berliner Vorstadt</span>
-            </div>
-            <div class="contact-info-block">
-              <div class="label">Telefon</div>
-              <a href="tel:+493312708945" class="value-text">+49 331 270 89 45</a>
-              <span style="color: var(--ink-soft); display: block;">Mo – Fr · 09 – 17 Uhr</span>
-            </div>
-            <div class="contact-info-block">
-              <div class="label">E-Mail</div>
-              <a href="mailto:studio@raumwerk-potsdam.de" class="value-text">studio@raumwerk-potsdam.de</a>
-              <span style="color: var(--ink-soft); display: block;">Antwort innerhalb von zwei Werktagen</span>
-            </div>
-            <div class="contact-info-block">
-              <div class="label">Anfahrt</div>
-              <span style="color: var(--ink-soft); display: block; line-height: 1.7;">S-Bahn Babelsberg · 12 Min Fußweg<br>Tram 92, 96 · Haltestelle Schillerplatz<br>Parkplätze im Hof (begrenzt)</span>
-            </div>
+            {direct.blocks.map((b) => (
+              <div class="contact-info-block">
+                <div class="label">{b.label}</div>
+                {b.value && (
+                  b.href
+                    ? <a href={b.href} class="value-text">{b.value}</a>
+                    : <span class="value-text">{b.value}</span>
+                )}
+                <span style="color: var(--ink-soft); display: block;" set:html={b.sub_html}></span>
+              </div>
+            ))}
           </div>
         </div>
 
         <div class="contact-form fade-in fade-in-delay-1">
-          <h3 style="margin-bottom: 0.5rem;">Anfrage senden</h3>
-          <p style="font-size: 0.95rem; margin-bottom: 2rem;">Wir melden uns innerhalb von drei Werktagen.</p>
+          <h3 style="margin-bottom: 0.5rem;">{form.heading}</h3>
+          <p style="font-size: 0.95rem; margin-bottom: 2rem;">{form.intro}</p>
           <form>
             <div class="form-group">
               <label for="name">Ihr Name</label>
@@ -63,12 +54,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <div class="form-group">
               <label for="type">Projektart</label>
               <select id="type" name="type">
-                <option>Privates Wohnen</option>
-                <option>Gastronomie</option>
-                <option>Hotellerie</option>
-                <option>Gewerbe / Praxis</option>
-                <option>Möbel / Sonderanfertigung</option>
-                <option>Beratung</option>
+                {form.project_types.map((opt) => (<option>{opt}</option>))}
               </select>
             </div>
             <div class="form-group">
@@ -77,9 +63,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             </div>
             <div class="form-group checkbox-group">
               <input type="checkbox" id="consent" required>
-              <label for="consent" style="margin: 0; text-transform: none; letter-spacing: normal; font-size: 0.85rem;">Ich habe die <a href="/datenschutz">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten zur Bearbeitung meiner Anfrage zu.</label>
+              <label for="consent" style="margin: 0; text-transform: none; letter-spacing: normal; font-size: 0.85rem;" set:html={form.consent_html}></label>
             </div>
-            <button type="submit" class="btn btn-arrow" style="width: 100%; justify-content: center;">Anfrage senden</button>
+            <button type="submit" class="btn btn-arrow" style="width: 100%; justify-content: center;">{form.submit_label}</button>
           </form>
         </div>
       </div>
@@ -91,8 +77,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <div class="container">
       <div class="map-block fade-in">
         <div class="map-pin-info">
-          <strong>Raumwerk Studio</strong>
-          Brandenburger Str. 42 · 14467 Potsdam
+          <strong>{map.name}</strong>
+          {map.address}
         </div>
       </div>
     </div>

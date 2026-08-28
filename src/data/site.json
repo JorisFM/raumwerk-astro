@@ -1,0 +1,45 @@
+{
+  "brand": "Raumwerk",
+  "nav": [
+    { "label": "Studio", "href": "/", "key": "studio" },
+    { "label": "Projekte", "href": "/projekte", "key": "projekte" },
+    { "label": "Leistungen", "href": "/leistungen", "key": "leistungen" },
+    { "label": "Über uns", "href": "/ueber-uns", "key": "ueber-uns" }
+  ],
+  "nav_cta": { "label": "Kontakt", "href": "/kontakt", "key": "kontakt" },
+  "footer": {
+    "address_lines": [
+      "Innenarchitektur Studio",
+      "Brandenburger Straße 42",
+      "14467 Potsdam"
+    ],
+    "socials": [
+      { "label": "In", "aria": "Instagram", "href": "#" },
+      { "label": "Pi", "aria": "Pinterest", "href": "#" },
+      { "label": "Li", "aria": "LinkedIn", "href": "#" },
+      { "label": "Be", "aria": "Behance", "href": "#" }
+    ],
+    "studio_links": [
+      { "label": "Über uns", "href": "/ueber-uns" },
+      { "label": "Leistungen", "href": "/leistungen" },
+      { "label": "Projekte", "href": "/projekte" },
+      { "label": "Journal", "href": "#" }
+    ],
+    "contact_links": [
+      { "label": "+49 331 270 89 45", "href": "tel:+493312708945" },
+      { "label": "studio@raumwerk-potsdam.de", "href": "mailto:studio@raumwerk-potsdam.de" },
+      { "label": "Anfahrt", "href": "/kontakt" }
+    ],
+    "hours": [
+      "Mo – Do · 09 – 18 Uhr",
+      "Fr · 09 – 16 Uhr",
+      "Sa · nach Vereinbarung"
+    ],
+    "copyright": "© 2014 – 2026 Raumwerk Innenarchitektur GmbH",
+    "legal_links": [
+      { "label": "Impressum", "href": "/impressum" },
+      { "label": "Datenschutz", "href": "/datenschutz" },
+      { "label": "AGB", "href": "#" }
+    ]
+  }
+}

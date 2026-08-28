@@ -30,6 +30,16 @@ src/
 │   ├── kontakt.astro      # /kontakt
 │   ├── impressum.astro    # /impressum
 │   └── datenschutz.astro  # /datenschutz
+├── data/                  # editierbare Inhalte (CloudCannon)
+│   ├── site.json          # global: Navigation, Footer, Kontaktdaten
+│   ├── home.json          # Inhalt der Startseite
+│   ├── projekte.json      # Fallstudien
+│   ├── leistungen.json    # Phasen, Honorarpakete, FAQ
+│   ├── ueber-uns.json     # Story, Werte, Team, Auszeichnungen
+│   └── kontakt.json       # Kontaktblöcke, Formular-Optionen
+├── legal/                 # editierbare Rechtstexte (Rich-Text)
+│   ├── impressum-body.html
+│   └── datenschutz-body.html
 └── styles/
     └── style.css          # unverändert aus dem Original übernommen
 ```
@@ -40,6 +50,30 @@ src/
 - **Nav & Footer** liegen einmalig in `src/components/` – keine Duplikate mehr pro Seite.
 - **script.js** wurde in das Layout eingebettet und wird von Astro gebündelt (als Modul).
 - **style.css** wurde unverändert übernommen und im Layout importiert.
+
+## CloudCannon / Visual Editing
+
+Damit sich die Website in CloudCannon bearbeiten lässt, stecken die **Inhalte
+nicht mehr fest in den `.astro`-Templates**, sondern in editierbaren Datenquellen.
+Die Templates rendern nur noch daraus. Konfiguriert wird das in
+[`cloudcannon.config.yml`](cloudcannon.config.yml):
+
+- **Data → site** — globale Inhalte (Navigation, Footer, Kontakt) aus `src/data/site.json`.
+- **Seiten** — je Seite eine JSON-Datei in `src/data/`, Bearbeitung als Formular.
+- **Rechtstexte** — Impressum/Datenschutz aus `src/legal/*.html`, Bearbeitung als Rich-Text.
+
+Weil die `.astro`-Dateien reine Templates sind, tauchen sie nicht mehr als
+„bearbeitbarer Inhalt" auf – dadurch verschwindet die WYSIWYG-Fehlermeldung.
+
+Build-Einstellungen in CloudCannon (falls nachzutragen):
+
+- **Install:** `npm install`
+- **Build:** `npm run build`
+- **Output:** `dist`
+
+Optionaler nächster Schritt: echtes On-Page-WYSIWYG über das Paket
+`@cloudcannon/editable-regions` (Bindings direkt auf der Live-Seite). Das ist eine
+frühe Version und sollte gegen eine echte CloudCannon-Instanz getestet werden.
 
 ## Hinweise
 

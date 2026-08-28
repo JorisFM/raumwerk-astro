@@ -85,27 +85,22 @@ const { title, description, active } = Astro.props;
 
     document.querySelectorAll('.fade-in').forEach((el) => observer.observe(el));
 
-    // Testimonial slider
-    const testimonials = [
-      {
-        quote:
-          'Raumwerk hat unser denkmalgeschütztes Stadthaus in einen Ort verwandelt, an dem Vergangenheit und Gegenwart selbstverständlich miteinander wohnen. Eine Sensibilität, die selten geworden ist.',
-        name: 'Dr. Cornelia Wiegand',
-        role: 'Bauherrin, Villa am Heiligen See',
-      },
-      {
-        quote:
-          'Die Zusammenarbeit war von der ersten Skizze bis zur Schlüsselübergabe geprägt von Klarheit, Handwerkskunst und einem feinen Gespür für Atmosphäre. Wir empfehlen das Studio uneingeschränkt weiter.',
-        name: 'Felix & Antonia Reinholdt',
-        role: 'Restaurant Mira, Potsdam',
-      },
-      {
-        quote:
-          'Lena und ihr Team haben es geschafft, die Identität unseres Hotels in jedem Detail spürbar zu machen – von der Tapete bis zum Türgriff. Unsere Gäste sprechen jeden Tag darüber.',
-        name: 'Henrik Albrecht',
-        role: 'Direktor, Sanssouci Suites Hotel',
-      },
-    ];
+    // Testimonial slider – data comes from the page (#testimonials-data JSON),
+    // which is populated from the page's editable data file.
+    interface Testimonial {
+      quote: string;
+      name: string;
+      role: string;
+    }
+    let testimonials: Testimonial[] = [];
+    const testimonialsEl = document.getElementById('testimonials-data');
+    if (testimonialsEl?.textContent) {
+      try {
+        testimonials = JSON.parse(testimonialsEl.textContent);
+      } catch {
+        testimonials = [];
+      }
+    }
 
     let testimonialIndex = 0;
     const quoteEl = document.querySelector<HTMLElement>('.testimonial blockquote');

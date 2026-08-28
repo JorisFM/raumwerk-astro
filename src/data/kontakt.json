@@ -1,0 +1,54 @@
+{
+  "title": "Kontakt – Raumwerk Innenarchitektur Potsdam",
+  "description": "Schreiben oder besuchen Sie uns. Brandenburger Straße 42, 14467 Potsdam. Telefon +49 331 270 89 45.",
+  "hero": {
+    "breadcrumb": "Kontakt",
+    "heading_html": "Schreiben oder<br><em>besuchen</em> Sie uns.",
+    "text": "Wir freuen uns auf Ihr Projekt. Schreiben Sie uns über das Formular, rufen Sie an – oder kommen Sie auf einen Espresso vorbei."
+  },
+  "direct": {
+    "eyebrow": "Direkt",
+    "heading_html": "So erreichen Sie <em>uns</em>.",
+    "blocks": [
+      {
+        "label": "Studio",
+        "value": "Brandenburger Straße 42",
+        "sub_html": "14467 Potsdam · Berliner Vorstadt"
+      },
+      {
+        "label": "Telefon",
+        "value": "+49 331 270 89 45",
+        "href": "tel:+493312708945",
+        "sub_html": "Mo – Fr · 09 – 17 Uhr"
+      },
+      {
+        "label": "E-Mail",
+        "value": "studio@raumwerk-potsdam.de",
+        "href": "mailto:studio@raumwerk-potsdam.de",
+        "sub_html": "Antwort innerhalb von zwei Werktagen"
+      },
+      {
+        "label": "Anfahrt",
+        "sub_html": "S-Bahn Babelsberg · 12 Min Fußweg<br>Tram 92, 96 · Haltestelle Schillerplatz<br>Parkplätze im Hof (begrenzt)"
+      }
+    ]
+  },
+  "form": {
+    "heading": "Anfrage senden",
+    "intro": "Wir melden uns innerhalb von drei Werktagen.",
+    "project_types": [
+      "Privates Wohnen",
+      "Gastronomie",
+      "Hotellerie",
+      "Gewerbe / Praxis",
+      "Möbel / Sonderanfertigung",
+      "Beratung"
+    ],
+    "consent_html": "Ich habe die <a href=\"/datenschutz\">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten zur Bearbeitung meiner Anfrage zu.",
+    "submit_label": "Anfrage senden"
+  },
+  "map": {
+    "name": "Raumwerk Studio",
+    "address": "Brandenburger Str. 42 · 14467 Potsdam"
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "title": "Über uns – Raumwerk Innenarchitektur Potsdam",
+  "description": "Raumwerk – ein achtköpfiges Innenarchitektur-Studio aus Potsdam. Lernen Sie das Team und unsere Haltung kennen.",
+  "hero": {
+    "breadcrumb": "Über uns",
+    "heading_html": "Acht Köpfe,<br>eine <em>Haltung</em>.",
+    "text": "Wir sind ein interdisziplinäres Studio aus Innenarchitekt:innen, Architekt:innen, Möbeldesigner:innen und einer Materialbibliothekarin. Was uns verbindet: die Liebe zum Handwerk und der Glaube, dass gute Räume Zeit brauchen."
+  },
+  "story": {
+    "eyebrow": "Geschichte",
+    "heading_html": "Aus einer Zigarrenfabrik in der <em>Berliner Vorstadt</em>.",
+    "image": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200&q=85&auto=format&fit=crop",
+    "image_alt": "Studio Innenraum",
+    "paragraphs": [
+      "Lena Hoffmann und Maximilian Berger lernten sich 2009 im Diplomstudium Innenarchitektur an der weißensee kunsthochschule berlin kennen. 2014 bezogen sie eine 120 Quadratmeter große Etage in einer ehemaligen Zigarrenfabrik in der Behlertstraße – und gründeten Raumwerk.",
+      "Aus dem Atelier wurde ein Studio, aus zwei wurden acht. Geblieben ist die Haltung: Wir sind keine Schnellzeichner. Wir entwerfen Räume, in denen man älter werden möchte.",
+      "Heute sitzen wir in einem umgebauten Hofgebäude in der Brandenburger Straße. Wer einen Termin vereinbart, läuft durch einen kleinen Skulpturenhof in unsere Materialbibliothek – und gerne auch direkt in einen Espresso."
+    ]
+  },
+  "values_section": {
+    "eyebrow": "Haltung",
+    "heading_html": "Vier <em>Überzeugungen</em>.",
+    "lead": "Sie schreiben sich nicht ins Leitbild – sie sitzen in den Entscheidungen, die wir jeden Tag treffen.",
+    "values": [
+      { "icon": "i.", "title": "Material vor Effekt", "text": "Eiche statt Eichenfurnier. Lehm statt Latex. Naturstein statt Großformatfliese. Wir bevorzugen Materialien, die altern dürfen – weil sie es ehrlich tun." },
+      { "icon": "ii.", "title": "Langsamer denken", "text": "Die meisten Fehler entstehen in der Phase, in der zu schnell entschieden wurde. Wir nehmen uns Zeit für die ersten zwanzig Prozent – und sparen sie hinten zehnfach ein." },
+      { "icon": "iii.", "title": "Lokal arbeiten", "text": "Achtzig Prozent unserer Möbel und Sonderanfertigungen entstehen in Brandenburg und Berlin. Wir kennen unsere Tischlereien beim Vornamen – und ihre Kinder." },
+      { "icon": "iv.", "title": "Räume für Menschen", "text": "Ein guter Raum dient nicht der Architektur, sondern den Menschen, die darin leben, arbeiten oder Gäste empfangen. Wir entwerfen für den Alltag, nicht für das Magazin." }
+    ]
+  },
+  "team_section": {
+    "eyebrow": "Gründung",
+    "heading_html": "Die Menschen <em>hinter Raumwerk</em>.",
+    "lead": "Lena und Maximilian führen das Studio gemeinsam – seit 2014, durch alle Projekte. Beide sind in jeder Anfrage die ersten Ansprechpartner.",
+    "members": [
+      {
+        "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=1100&q=85&auto=format&fit=crop",
+        "image_alt": "Lena Hoffmann",
+        "role": "Geschäftsführung · Gründerin",
+        "name": "Lena Hoffmann",
+        "bios": [
+          "Diplom-Innenarchitektin, weißensee kunsthochschule berlin (2009). Vor Raumwerk vier Jahre bei <em>studioilse</em> in London – Schwerpunkt Hotellerie und Residential für internationale Bauherren. Heute leitet sie bei Raumwerk die Gewerke Wohnen und Hotel sowie die Materialentwicklung gemeinsam mit Helena Krasnik.",
+          "Lena hat eine besondere Schwäche für gebrauchte Objekte mit Geschichte – einen 1953er Saarinen-Tulip-Stuhl, den sie auf einem Hofflohmarkt in Sacrow gefunden hat, oder die handgewebten Kelims aus Anatolien, die sie auf Reisen mitbringt. Sie lebt mit Familie und einem Lagotto Romagnolo namens Otis in Babelsberg."
+        ],
+        "membership": "Mitgliedsnummer BAK Brandenburg · BB 04-2841"
+      },
+      {
+        "image": "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=1100&q=85&auto=format&fit=crop",
+        "image_alt": "Maximilian Berger",
+        "role": "Kreativdirektion · Gründer",
+        "name": "Maximilian Berger",
+        "bios": [
+          "Diplom-Architekt, Universität der Künste Berlin (2010). Drei Jahre bei <em>David Chipperfield Architects</em> in Berlin und London, anschließend Selbstständigkeit. Bei Raumwerk verantwortet er Entwurf, Möbeldesign und Lichtkonzepte – die zeichnerische Hand des Studios.",
+          "Max sammelt Bauhaus- und Mid-Century-Bürostühle (aktuell 23 Stück, davon vier im Studio in Benutzung) und unterrichtet seit 2021 als Gastdozent an der FH Potsdam im Bereich Möbeldesign. Wenn er nicht zeichnet, ist er mit dem Faltboot auf der Havel unterwegs."
+        ],
+        "membership": "Mitgliedsnummer BAK Brandenburg · BB 04-3017"
+      }
+    ],
+    "note": "Hinter den beiden steht ein festes Team aus sechs weiteren Köpfen – Innenarchitekt:innen, ein Tischlermeister, eine Materialbibliothekarin, ein bauvorlageberechtigter Architekt. Wir nennen sie hier bewusst nicht namentlich; bei einem Studiobesuch lernen Sie ohnehin alle persönlich kennen."
+  },
+  "awards_section": {
+    "eyebrow": "Auszeichnungen",
+    "heading_html": "Eine kleine <em>Vitrine</em>.",
+    "awards": [
+      { "year": "2025", "title": "German Design Award", "text": "Excellent Architecture · Interior · Restaurant Mira" },
+      { "year": "2024", "title": "AIT Award", "text": "Shortlist · Hospitality · Sanssouci Suites" },
+      { "year": "2023", "title": "Iconic Awards", "text": "Innovative Interior · Loft Charlottenburg" },
+      { "year": "2022", "title": "Brandenburgischer Baukulturpreis", "text": "Anerkennung · Behutsamer Umbau Hofgebäude" }
+    ]
+  },
+  "cta": {
+    "eyebrow": "Studiobesuch",
+    "heading_html": "Wir kochen <em>guten Espresso</em>.",
+    "text": "Vereinbaren Sie einen Termin in unserem Studio und bringen Sie ruhig schon Ihre Grundrisse mit. Oder einfach eine Idee.",
+    "button": { "label": "Kontakt aufnehmen", "href": "/kontakt" }
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "title": "Leistungen – Raumwerk Innenarchitektur Potsdam",
+  "description": "Konzeption, Innenarchitektur, Möbeldesign, Lichtplanung – das vollständige Leistungsspektrum von Raumwerk.",
+  "hero": {
+    "breadcrumb": "Leistungen",
+    "heading_html": "Vom Aufmaß<br>zur <em>Schlüsselübergabe</em>.",
+    "text": "Wir arbeiten nach den Leistungsphasen 1 bis 9 der HOAI – und gehen darüber hinaus, wo es zählt: Material, Licht, Möbel, Stoff, das Styling am Eröffnungstag."
+  },
+  "phases": [
+    {
+      "eyebrow": "Phase 01 – 02",
+      "heading_html": "Konzeption &<br><em>Vorentwurf</em>.",
+      "paragraphs": [
+        "Jedes Projekt beginnt bei uns mit einem ausführlichen Erstgespräch und einer Bestandsaufnahme vor Ort. Wir hören zu, schauen, messen, fotografieren – und entwickeln daraus ein Raumkonzept, das auf Ihre Lebens- oder Geschäftsrealität zugeschnitten ist.",
+        "Die erste Präsentation enthält Stimmungsbilder, drei mögliche Raumkonzepte, eine Materialempfehlung und eine offene Kostenindikation. Hier entsteht die Richtung."
+      ],
+      "image": "https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?w=1200&q=85&auto=format&fit=crop",
+      "image_alt": "Konzeption",
+      "image_first": false,
+      "warm": false
+    },
+    {
+      "eyebrow": "Phase 03 – 05",
+      "heading_html": "Entwurf &<br><em>Werkplanung</em>.",
+      "paragraphs": [
+        "Aus dem gewählten Konzept entsteht der verbindliche Entwurf: Grundrisse, Schnitte, Detailpläne, Möbelaufstellungen, Materialtafeln. Wir erstellen die Werkplanung intern – jede Schreinerei, die mit uns arbeitet, bestätigt: hier denkt jemand das Maß zu Ende.",
+        "Auch die Genehmigungsplanung übernehmen wir, sofern Ihr Projekt sie erfordert. Tobias, unser bauvorlageberechtigter Architekt, kennt die Behörden in Potsdam und Berlin – und sie ihn."
+      ],
+      "image": "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1200&q=85&auto=format&fit=crop",
+      "image_alt": "Werkplanung",
+      "image_first": true,
+      "warm": true
+    },
+    {
+      "eyebrow": "Phase 06 – 09",
+      "heading_html": "Ausschreibung,<br>Bauleitung &<br><em>Übergabe</em>.",
+      "paragraphs": [
+        "Wir schreiben Gewerke aus, vergleichen Angebote, vergeben in Ihrem Namen. Während der Bauphase sind wir mindestens einmal wöchentlich auf der Baustelle – bei Hotelprojekten täglich.",
+        "Am Ende stehen Abnahme, Mängelmanagement und – das Beste – das Styling. Wir stellen Ihre Bibliothek ein, hängen die Bilder, decken den ersten Tisch. Die Schlüsselübergabe ist bei uns kein Ende, sondern ein Empfang."
+      ],
+      "image": "https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?w=1200&q=85&auto=format&fit=crop",
+      "image_alt": "Übergabe",
+      "image_first": false,
+      "warm": false
+    }
+  ],
+  "packages_section": {
+    "eyebrow": "Honorarpakete",
+    "heading_html": "Drei Modelle, <em>klar geordnet</em>.",
+    "lead": "Wir arbeiten je nach Projekt nach Pauschale, HOAI oder Stundensatz. Hier eine Orientierung.",
+    "packages": [
+      {
+        "tag": "Paket 01",
+        "title": "Beratung",
+        "text": "Eine Halbtagesberatung im Studio oder bei Ihnen vor Ort. Mit schriftlicher Empfehlung.",
+        "price_html": "ab 690&nbsp;€",
+        "price_note": "zzgl. MwSt.",
+        "featured": false
+      },
+      {
+        "tag": "Paket 02 · Empfohlen",
+        "title": "Konzept",
+        "text": "Vom Aufmaß bis zum verbindlichen Vorentwurf inklusive Materialempfehlung und Kostenindikation.",
+        "price_html": "ab 4.800&nbsp;€",
+        "price_note": "zzgl. MwSt.",
+        "featured": true
+      },
+      {
+        "tag": "Paket 03",
+        "title": "Vollbetreuung",
+        "text": "Leistungsphasen 1 – 9 nach HOAI inklusive Werkplanung, Bauleitung und Schlüsselübergabe.",
+        "price_html": "individuell",
+        "price_note": "nach Aufwand",
+        "featured": false
+      }
+    ]
+  },
+  "faq_section": {
+    "eyebrow": "Häufige Fragen",
+    "heading_html": "Was Bauherrinnen <em>oft fragen</em>.",
+    "items": [
+      {
+        "question": "Wie groß sollte mein Projekt mindestens sein?",
+        "answer": "Wir nehmen Wohnungsprojekte ab ca. 80 m² an, gewerbliche Projekte ab ca. 150 m². Für kleinere Vorhaben bieten wir das Beratungspaket – darin lassen sich oft die wichtigsten Weichen stellen."
+      },
+      {
+        "question": "Mit welchen Kosten muss ich grob rechnen?",
+        "answer": "Für hochwertige Innenausbauten kalkulieren unsere Bauherrinnen meist zwischen 1.800 € und 3.500 € pro Quadratmeter (zzgl. unseres Honorars). Die genaue Spanne ergibt sich aus Ausstattungsniveau, Bestandszustand und gewählten Manufakturen."
+      },
+      {
+        "question": "Wie lange dauert ein Projekt typischerweise?",
+        "answer": "Eine Wohnungssanierung benötigt von Beauftragung bis Schlüsselübergabe ca. 9 – 14 Monate, ein Hotel- oder Gastronomieprojekt 12 – 20 Monate. Davon entfallen rund vier Monate auf Konzept und Werkplanung, der Rest auf Genehmigung und Bau."
+      },
+      {
+        "question": "Arbeiten Sie auch außerhalb von Berlin und Potsdam?",
+        "answer": "Ja – wir betreuen regelmäßig Projekte in Hamburg, München, Leipzig und Wien. Reisen wir an, klären wir die Aufwände vorab transparent. Manche unserer schönsten Arbeiten sind in Brandenburger Dörfern entstanden."
+      }
+    ]
+  },
+  "cta": {
+    "eyebrow": "Bereit?",
+    "heading_html": "Lassen Sie uns <em>sprechen</em>.",
+    "text": "Ein erstes Gespräch ist kostenlos und unverbindlich. Wir nehmen uns dafür eine Stunde Zeit – egal, ob daraus ein Projekt wird oder nicht.",
+    "button": { "label": "Erstgespräch anfragen", "href": "/kontakt" }
+  }
+}
