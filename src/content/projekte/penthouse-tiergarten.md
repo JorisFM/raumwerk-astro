@@ -5,7 +5,7 @@ location: Berlin · 2021
 year: "2021"
 order: 6
 size: large
-image: https://images.unsplash.com/photo-1560185007-5f0bb1866cab?w=1600&q=85&auto=format&fit=crop
+image: /images/projekt-penthouse.webp
 image_alt: Penthouse Tiergarten
 facts:
   - label: Fläche

@@ -5,7 +5,7 @@ location: Potsdam · 2024
 year: "2024"
 order: 1
 size: large
-image: https://images.unsplash.com/photo-1554995207-c18c203602cb?w=1600&q=85&auto=format&fit=crop
+image: /images/projekt-villa.webp
 image_alt: Villa am Heiligen See
 facts:
   - label: Fläche

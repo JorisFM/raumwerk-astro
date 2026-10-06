@@ -6,7 +6,7 @@ location: Berlin · 2023
 year: '2023'
 order: 4
 size: medium
-image: https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=1600&q=85&auto=format&fit=crop
+image: /images/projekt-loft.webp
 image_alt: Loft Charlottenburg
 facts:
   - label: Fläche

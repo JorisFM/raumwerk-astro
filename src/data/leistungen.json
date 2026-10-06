@@ -15,8 +15,8 @@
         "Jedes Projekt beginnt bei uns mit einem ausführlichen Erstgespräch und einer Bestandsaufnahme vor Ort. Wir hören zu, schauen, messen, fotografieren – und entwickeln daraus ein Raumkonzept, das auf Ihre Lebens- oder Geschäftsrealität zugeschnitten ist.",
         "Die erste Präsentation enthält Stimmungsbilder, drei mögliche Raumkonzepte, eine Materialempfehlung und eine offene Kostenindikation. Hier entsteht die Richtung."
       ],
-      "image": "https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?w=1200&q=85&auto=format&fit=crop",
-      "image_alt": "Konzeption",
+      "image": "/images/phase-konzeption.webp",
+      "image_alt": "Konzeptphase: Grundriss-Skizzen und Materialproben auf dem Arbeitstisch",
       "image_first": false,
       "warm": false
     },
@@ -25,10 +25,10 @@
       "heading_html": "Entwurf &<br><em>Werkplanung</em>.",
       "paragraphs": [
         "Aus dem gewählten Konzept entsteht der verbindliche Entwurf: Grundrisse, Schnitte, Detailpläne, Möbelaufstellungen, Materialtafeln. Wir erstellen die Werkplanung intern – jede Schreinerei, die mit uns arbeitet, bestätigt: hier denkt jemand das Maß zu Ende.",
-        "Auch die Genehmigungsplanung übernehmen wir, sofern Ihr Projekt sie erfordert. Tobias, unser bauvorlageberechtigter Architekt, kennt die Behörden in Potsdam und Berlin – und sie ihn."
+        "Auch die Genehmigungsplanung übernehmen wir, sofern Ihr Projekt sie erfordert. Unser bauvorlageberechtigter Architekt kennt die Behörden in Potsdam und Berlin – und sie ihn."
       ],
-      "image": "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1200&q=85&auto=format&fit=crop",
-      "image_alt": "Werkplanung",
+      "image": "/images/phase-werkplanung.webp",
+      "image_alt": "Werkplanung: Detailzeichnungen und Musterplatte aus Eiche, Travertin und Messing",
       "image_first": true,
       "warm": true
     },
@@ -39,8 +39,8 @@
         "Wir schreiben Gewerke aus, vergleichen Angebote, vergeben in Ihrem Namen. Während der Bauphase sind wir mindestens einmal wöchentlich auf der Baustelle – bei Hotelprojekten täglich.",
         "Am Ende stehen Abnahme, Mängelmanagement und – das Beste – das Styling. Wir stellen Ihre Bibliothek ein, hängen die Bilder, decken den ersten Tisch. Die Schlüsselübergabe ist bei uns kein Ende, sondern ein Empfang."
       ],
-      "image": "https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?w=1200&q=85&auto=format&fit=crop",
-      "image_alt": "Übergabe",
+      "image": "/images/phase-uebergabe.webp",
+      "image_alt": "Fertig eingerichteter Essbereich kurz vor der Übergabe",
       "image_first": false,
       "warm": false
     }

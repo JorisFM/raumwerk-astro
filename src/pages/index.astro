@@ -1,11 +1,21 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
 import page from '../data/home.json';
 
 const { hero, marquee, intro, services, projects, process, testimonials, journal, cta } = page;
 const t0 = testimonials[0];
+
+// "Aktuelle Projekte" come straight from the Projekte collection (first four by
+// `order`), so new projects added in CloudCannon show up here automatically.
+// The home grid uses a fixed tile rhythm (7+5 / 6+6 columns).
+const homeTileSizes = ['large', 'small', 'medium', 'medium'];
+const featured = (await getCollection('projekte'))
+  .sort((a, b) => a.data.order - b.data.order)
+  .slice(0, homeTileSizes.length);
 ---
 <BaseLayout title={page.title} description={page.description} active="studio">
+  <link slot="head" rel="preload" as="image" href={hero.image} fetchpriority="high" />
   <!-- Hero -->
   <header class="hero">
     <div class="hero-image" style={`background-image: url('${hero.image}');`}></div>
@@ -48,7 +58,7 @@ const t0 = testimonials[0];
           </div>
         </div>
         <div class="intro-image fade-in fade-in-delay-1">
-          <img src={intro.image} alt={intro.image_alt}>
+          <img src={intro.image} alt={intro.image_alt} loading="lazy" decoding="async">
         </div>
       </div>
     </div>
@@ -74,7 +84,7 @@ const t0 = testimonials[0];
 
         {services.tabs.map((tab, i) => (
           <div class:list={['tab-content', { active: i === 0 }]} data-tab={tab.id}>
-            <img src={tab.image} alt={tab.image_alt}>
+            <img src={tab.image} alt={tab.image_alt} loading="lazy" decoding="async">
             <div class="tab-info">
               <h3>{tab.title}</h3>
               <p>{tab.text}</p>
@@ -101,17 +111,17 @@ const t0 = testimonials[0];
       </div>
 
       <div class="projects-grid fade-in fade-in-delay-1">
-        {projects.items.map((p) => (
-          <div class:list={['project-card', p.size]}>
-            <div class="img-wrap"><img src={p.image} alt={p.image_alt}></div>
+        {featured.map((p, i) => (
+          <a class:list={['project-card', homeTileSizes[i]]} href={`/projekte/${p.slug}`}>
+            <div class="img-wrap"><img src={p.data.image} alt={p.data.image_alt} loading="lazy" decoding="async"></div>
             <div class="meta">
               <div>
-                <div class="cat">{p.category}</div>
-                <h4>{p.title}</h4>
+                <div class="cat">{p.data.category}</div>
+                <h4>{p.data.title}</h4>
               </div>
-              <span class="year">{p.year}</span>
+              <span class="year">{p.data.year}</span>
             </div>
-          </div>
+          </a>
         ))}
       </div>
     </div>
@@ -162,12 +172,14 @@ const t0 = testimonials[0];
           <span class="eyebrow">{journal.eyebrow}</span>
           <h2 set:html={journal.heading_html}></h2>
         </div>
-        <a href={journal.cta.href} class="btn btn-arrow">{journal.cta.label}</a>
+        {journal.cta?.href && journal.cta.href !== '#' && (
+          <a href={journal.cta.href} class="btn btn-arrow">{journal.cta.label}</a>
+        )}
       </div>
       <div class="journal-grid">
         {journal.items.map((item, i) => (
           <article class:list={['journal-card', 'fade-in', i > 0 && `fade-in-delay-${i}`]}>
-            <div class="img-wrap"><img src={item.image} alt={item.image_alt}></div>
+            <div class="img-wrap"><img src={item.image} alt={item.image_alt} loading="lazy" decoding="async"></div>
             <div class="date">{item.date}</div>
             <h4>{item.title}</h4>
             <p>{item.text}</p>
