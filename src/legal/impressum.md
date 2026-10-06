@@ -45,7 +45,7 @@ Kurfürstenstraße 52, 14467 Potsdam<br>
 Mitgliedsnummer Lena Hoffmann: BB 04-2841<br>
 Mitgliedsnummer Maximilian Berger: BB 04-3017
 
-Es gelten die berufsrechtlichen Regelungen des Brandenburgischen Architektengesetzes (BbgArchG) sowie die Berufsordnung der Brandenburgischen Architektenkammer, einsehbar unter: <a href="#" style="color: var(--accent);">www.ak-brandenburg.de</a>
+Es gelten die berufsrechtlichen Regelungen des Brandenburgischen Architektengesetzes (BbgArchG) sowie die Berufsordnung der Brandenburgischen Architektenkammer, einsehbar unter: <a href="https://www.ak-brandenburg.de" style="color: var(--accent);" target="_blank" rel="noopener">www.ak-brandenburg.de</a>
 
 ### Berufshaftpflichtversicherung
 
@@ -82,11 +82,11 @@ Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unt
 
 ### Bildnachweise
 
-Projektfotografien: © Tom Roeler, Berlin · Studioaufnahmen: © Anne-Sophie Wegert, Potsdam · Materialfotografien: © Raumwerk Innenarchitektur GmbH · Stockmaterial mit freundlicher Genehmigung von Unsplash (Editorial Use).
+Die auf dieser Website verwendeten Raum- und Detailabbildungen sind KI-generierte Illustrationen.
 
 ## Konzept & Realisierung
 
-Gestaltung und Programmierung: <a href="#" style="color: var(--accent);">Studio Sieben Acht</a>, Berlin · 2026
+Gestaltung und Programmierung: Studio Sieben Acht, Berlin · 2026
 
 <p style="margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--line); font-size: 0.85rem;">
 Stand dieses Impressums: 1. März 2026

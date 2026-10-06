@@ -24,6 +24,7 @@ const cta = projektePage.cta;
   title={`${data.title} – Raumwerk Innenarchitektur Potsdam`}
   description={`${data.category} · ${data.location} – Projekt von Raumwerk Innenarchitektur, Potsdam.`}
   active="projekte"
+  image={data.image}
 >
   <section class="page-hero">
     <div class="container">
@@ -38,7 +39,7 @@ const cta = projektePage.cta;
       <article class="case-study">
         <div class="case-image">
           <span class="case-num">{num}</span>
-          <img src={data.image} alt={data.image_alt}>
+          <img src={data.image} alt={data.image_alt} fetchpriority="high" width="1600" height="1200">
         </div>
         <div class="case-info">
           <div class="case-meta">

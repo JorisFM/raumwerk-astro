@@ -20,7 +20,7 @@ const { hero, phases, packages_section, faq_section, cta } = page;
         <div class="intro-grid">
           {ph.image_first && (
             <div class="intro-image fade-in">
-              <img src={ph.image} alt={ph.image_alt}>
+              <img src={ph.image} alt={ph.image_alt} loading="lazy" decoding="async" width="1200" height="1500">
             </div>
           )}
           <div class:list={['intro-text', 'fade-in', ph.image_first && 'fade-in-delay-1']}>
@@ -30,7 +30,7 @@ const { hero, phases, packages_section, faq_section, cta } = page;
           </div>
           {!ph.image_first && (
             <div class="intro-image fade-in fade-in-delay-1">
-              <img src={ph.image} alt={ph.image_alt}>
+              <img src={ph.image} alt={ph.image_alt} loading="lazy" decoding="async" width="1200" height="1500">
             </div>
           )}
         </div>
@@ -49,7 +49,7 @@ const { hero, phases, packages_section, faq_section, cta } = page;
         <p class="lead" style="color: rgba(250, 246, 239, 0.7);">{packages_section.lead}</p>
       </div>
 
-      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 4rem;">
+      <div class="packages-grid">
         {packages_section.packages.map((pkg, i) => (
           <div
             class:list={['fade-in', i > 0 && `fade-in-delay-${i}`]}

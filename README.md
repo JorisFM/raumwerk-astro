@@ -94,11 +94,32 @@ Optionaler nächster Schritt: echtes On-Page-WYSIWYG über das Paket
 `@cloudcannon/editable-regions` (Bindings direkt auf der Live-Seite). Das ist eine
 frühe Version und sollte gegen eine echte CloudCannon-Instanz getestet werden.
 
+## Bilder
+
+Alle Bilder liegen lokal als WebP in `public/images/` (kein Unsplash/Fremd-Hosting mehr)
+und sind auf das jeweilige Slot-Format zugeschnitten:
+
+| Slot | Format | Größe |
+|---|---|---|
+| Hero Startseite | 16:9 | 2400×1350 |
+| Leistungs-Tabs, Projekte, Journal | 4:3 | 1600×1200 |
+| Intro, Phasen, Studio, Team | 4:5 | 1200×1500 |
+| Studio-Eingang (Kontakt) | 21:9 | 2400×1029 |
+
+Die aktuellen Raum- und Detailbilder sind **KI-generierte Illustrationen** (siehe Impressum).
+Für die Projekte sollten sie durch echte Projektfotografie ersetzt werden. Neue Bilder lädt
+man in CloudCannon über das Bildfeld hoch (landen in `public/uploads/`).
+
+`public/images/og-default.jpg` (1200×630) ist das Vorschaubild für Social Media/Messenger;
+Projektseiten verwenden automatisch ihr eigenes Projektbild.
+
+## Schriften
+
+Cormorant Garamond und Inter werden über `@fontsource` **lokal ausgeliefert** – es gibt keine
+Verbindung zu Google Fonts (passt zur Datenschutzerklärung).
+
 ## Hinweise
 
-- Die Bilder werden weiterhin von Unsplash geladen. Für einen produktiven Auftritt
-  empfiehlt es sich, sie lokal in `public/` oder `src/assets/` abzulegen und über
-  Astros `<Image />`-Komponente auszuliefern.
 - Das Kontaktformular nutzt **CloudCannon Forms**: es postet an eine Inbox
   (`inbox_key` in `src/data/kontakt.json`) und leitet auf `/danke` weiter.
   Damit Einsendungen ankommen, muss in CloudCannon unter **Hosting → Forms** eine

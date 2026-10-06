@@ -5,7 +5,7 @@ location: Potsdam · 2024
 year: "2024"
 order: 2
 size: small
-image: https://images.unsplash.com/photo-1559329007-40df8a9345d8?w=1400&q=85&auto=format&fit=crop
+image: /images/projekt-mira.webp
 image_alt: Restaurant Mira
 facts:
   - label: Fläche

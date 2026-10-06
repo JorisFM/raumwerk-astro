@@ -79,12 +79,16 @@ const { hero, direct, form, map } = page;
   <!-- Map -->
   <section style="padding-top: 0;">
     <div class="container">
-      <div class="map-block fade-in">
-        <div class="map-pin-info">
+      <figure class="map-block fade-in">
+        <img src={map.image} alt={map.image_alt} loading="lazy" decoding="async" width="2400" height="1029">
+        <figcaption class="map-pin-info">
           <strong>{map.name}</strong>
           {map.address}
-        </div>
-      </div>
+          {map.route_url && (
+            <a href={map.route_url} class="map-route" target="_blank" rel="noopener">{map.route_label} →</a>
+          )}
+        </figcaption>
+      </figure>
     </div>
   </section>
 </BaseLayout>

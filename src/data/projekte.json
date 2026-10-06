@@ -3,23 +3,42 @@
   "description": "Realisierte Projekte als Fallstudien: Wohnräume, Hotellerie, Gastronomie und Möbeldesign aus dem Raumwerk Studio Potsdam.",
   "hero": {
     "breadcrumb": "Projekte",
-    "heading_html": "Sechs Fallstudien<br>aus elf <em>Studiojahren</em>.",
+    "heading_html": "Ausgewählte Arbeiten<br>aus zwölf <em>Studiojahren</em>.",
     "text": "Eine kleine Auswahl realisierter Arbeiten – mit Material, Maßen und Geschichten dahinter. 87 Projekte sind es insgesamt; hier die, die wir am liebsten zeigen."
   },
   "numbers": {
     "eyebrow": "In Zahlen",
-    "heading_html": "Elf Jahre <em>Studio</em>.",
+    "heading_html": "Zwölf Jahre <em>Studio</em>.",
     "stats": [
-      { "num": "87", "label": "Realisierte Projekte", "delay": 0 },
-      { "num": "14", "label": "Hotelzimmer-Typologien", "delay": 1 },
-      { "num": "340+", "label": "Maßmöbel-Anfertigungen", "delay": 2 },
-      { "num": "23", "label": "Manufakturen-Partner:innen", "delay": 3 }
+      {
+        "num": "87",
+        "label": "Realisierte Projekte",
+        "delay": 0
+      },
+      {
+        "num": "14",
+        "label": "Hotelzimmer-Typologien",
+        "delay": 1
+      },
+      {
+        "num": "340+",
+        "label": "Maßmöbel-Anfertigungen",
+        "delay": 2
+      },
+      {
+        "num": "23",
+        "label": "Manufakturen-Partner:innen",
+        "delay": 3
+      }
     ]
   },
   "cta": {
     "eyebrow": "Eigenes Vorhaben?",
     "heading_html": "Wir freuen uns auf <em>Ihre Idee</em>.",
     "text": "Senden Sie uns eine kurze Beschreibung Ihres Projekts – wir melden uns innerhalb von drei Werktagen.",
-    "button": { "label": "Anfrage senden", "href": "/kontakt" }
+    "button": {
+      "label": "Anfrage senden",
+      "href": "/kontakt"
+    }
   }
 }

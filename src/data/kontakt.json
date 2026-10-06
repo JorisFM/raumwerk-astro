@@ -19,13 +19,13 @@
         "label": "Telefon",
         "value": "+49 331 270 89 45",
         "href": "tel:+493312708945",
-        "sub_html": "Mo – Fr · 09 – 17 Uhr"
+        "sub_html": "Mo – Do 09 – 18 Uhr · Fr 09 – 16 Uhr"
       },
       {
         "label": "E-Mail",
         "value": "studio@raumwerk-potsdam.de",
         "href": "mailto:studio@raumwerk-potsdam.de",
-        "sub_html": "Antwort innerhalb von zwei Werktagen"
+        "sub_html": "Antwort innerhalb von drei Werktagen"
       },
       {
         "label": "Anfahrt",
@@ -51,6 +51,10 @@
   },
   "map": {
     "name": "Raumwerk Studio",
-    "address": "Brandenburger Str. 42 · 14467 Potsdam"
+    "address": "Brandenburger Str. 42 · 14467 Potsdam",
+    "image": "/images/studio-eingang.webp",
+    "image_alt": "Eingang des Raumwerk-Studios im Backstein-Hof",
+    "route_label": "Route planen",
+    "route_url": "https://www.openstreetmap.org/search?query=Brandenburger%20Stra%C3%9Fe%2042%2C%2014467%20Potsdam"
   }
 }

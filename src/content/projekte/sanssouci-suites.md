@@ -5,7 +5,7 @@ location: Potsdam · 2023
 year: "2023"
 order: 3
 size: medium
-image: https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1400&q=85&auto=format&fit=crop
+image: /images/projekt-sanssouci.webp
 image_alt: Sanssouci Suites
 facts:
   - label: Suiten

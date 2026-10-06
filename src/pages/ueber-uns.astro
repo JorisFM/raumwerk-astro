@@ -18,7 +18,7 @@ const { hero, story, values_section, team_section, awards_section, cta } = page;
     <div class="container">
       <div class="intro-grid">
         <div class="intro-image fade-in">
-          <img src={story.image} alt={story.image_alt}>
+          <img src={story.image} alt={story.image_alt} loading="lazy" decoding="async" width="1200" height="1500">
         </div>
         <div class="intro-text fade-in fade-in-delay-1">
           <span class="eyebrow">{story.eyebrow}</span>
@@ -63,10 +63,10 @@ const { hero, story, values_section, team_section, awards_section, cta } = page;
         <p class="lead">{team_section.lead}</p>
       </div>
 
-      <div class="team-grid" style="grid-template-columns: 1fr 1fr; gap: 4rem;">
+      <div class="team-grid team-grid--founders">
         {team_section.members.map((m, i) => (
           <div class:list={['team-card', 'fade-in', i > 0 && `fade-in-delay-${i}`]}>
-            <div class="img-wrap"><img src={m.image} alt={m.image_alt}></div>
+            <div class="img-wrap"><img src={m.image} alt={m.image_alt} loading="lazy" decoding="async" width="1200" height="1500"></div>
             <div class="role">{m.role}</div>
             <h4>{m.name}</h4>
             {m.bios.map((b) => (

@@ -5,7 +5,7 @@ location: Potsdam · 2022
 year: "2022"
 order: 5
 size: small
-image: https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=1400&q=85&auto=format&fit=crop
+image: /images/projekt-stadthaus.webp
 image_alt: Stadthaus Holländisches Viertel
 facts:
   - label: Fläche
