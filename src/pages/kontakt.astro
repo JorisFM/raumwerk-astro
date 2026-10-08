@@ -38,7 +38,7 @@ const { hero, direct, form, map } = page;
         <div class="contact-form fade-in fade-in-delay-1">
           <h3 style="margin-bottom: 0.5rem;">{form.heading}</h3>
           <p style="font-size: 0.95rem; margin-bottom: 2rem;">{form.intro}</p>
-          <form method="post" action={form.success_url}>
+          <form data-success-url={form.success_url}>
             <div class="form-group">
               <label for="name">Ihr Name</label>
               <input type="text" id="name" name="name" required>
@@ -65,10 +65,6 @@ const { hero, direct, form, map } = page;
               <input type="checkbox" id="consent" name="consent" value="ja" required>
               <label for="consent" style="margin: 0; text-transform: none; letter-spacing: normal; font-size: 0.85rem;" set:html={form.consent_html}></label>
             </div>
-            {/* CloudCannon Forms: verbindet das Formular mit der Inbox (Hosting → Forms). */}
-            <input type="hidden" name="inbox_key" value={form.inbox_key}>
-            {/* Honeypot gegen Spam – muss leer bleiben, für Menschen unsichtbar. */}
-            <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="display: none;">
             <button type="submit" class="btn btn-arrow" style="width: 100%; justify-content: center;">{form.submit_label}</button>
           </form>
         </div>

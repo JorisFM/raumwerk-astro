@@ -56,6 +56,19 @@ src/
 - **script.js** wurde in das Layout eingebettet und wird von Astro gebündelt (als Modul).
 - **style.css** wurde unverändert übernommen und im Layout importiert.
 
+## Deployment (GitHub Pages)
+
+Jeder Push auf `main` baut die Seite über `.github/workflows/deploy.yml` und veröffentlicht sie
+auf GitHub Pages unter **raumwerk-potsdam.de** (Domain steht in `public/CNAME`).
+
+Einmalig einzurichten:
+1. Repo öffentlich machen (GitHub Pages ist für private Repos nur mit GitHub Pro möglich).
+2. Repo → **Settings → Pages → Source: GitHub Actions**.
+3. Unter **Settings → Pages → Custom domain** `raumwerk-potsdam.de` eintragen, später **Enforce HTTPS**.
+4. DNS bei Hostinger: A-Records der Hauptdomain auf `185.199.108.153`, `185.199.109.153`,
+   `185.199.110.153`, `185.199.111.153`; `www` als CNAME auf `jorisfm.github.io`.
+   MX-Einträge (E-Mail) nicht anfassen.
+
 ## CloudCannon / Visual Editing
 
 Damit sich die Website in CloudCannon bearbeiten lässt, stecken die **Inhalte
@@ -120,7 +133,6 @@ Verbindung zu Google Fonts (passt zur Datenschutzerklärung).
 
 ## Hinweise
 
-- Das Kontaktformular nutzt **CloudCannon Forms**: es postet an eine Inbox
-  (`inbox_key` in `src/data/kontakt.json`) und leitet auf `/danke` weiter.
-  Damit Einsendungen ankommen, muss in CloudCannon unter **Hosting → Forms** eine
-  Inbox mit dem passenden Key (`raumwerk_kontakt`) verknüpft sein.
+- Das Kontaktformular ist eine **Demo**: Es prüft die Pflichtfelder, zeigt „Wird gesendet…" und
+  leitet auf `/danke` weiter, überträgt oder speichert aber **nichts**. Für echte Anfragen lässt
+  es sich später z. B. an Web3Forms anbinden.

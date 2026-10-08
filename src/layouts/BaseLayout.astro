@@ -167,17 +167,20 @@ const isDefaultOg = image === '/images/og-default.jpg';
       }, 7000);
     }
 
-    // Contact form: the form posts natively to CloudCannon (see kontakt.astro),
-    // which redirects to the success page. We only give a "sending…" hint here
-    // WITHOUT preventing the real submission.
+    // Contact form (demo): nothing is transmitted or stored. After the browser's
+    // own validation passes we show a short "sending" state and continue to the
+    // thank-you page, so the flow feels like a real submission.
     const contactForm = document.querySelector<HTMLFormElement>('.contact-form form');
     if (contactForm) {
-      contactForm.addEventListener('submit', () => {
+      contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
         const btn = contactForm.querySelector<HTMLButtonElement>('button[type="submit"]');
         if (btn) {
           btn.textContent = 'Wird gesendet…';
           btn.disabled = true;
         }
+        const target = contactForm.dataset.successUrl || '/danke/';
+        setTimeout(() => window.location.assign(target), 1200);
       });
     }
   </script>
